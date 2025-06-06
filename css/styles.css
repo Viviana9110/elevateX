@@ -487,7 +487,7 @@ footer a:hover {
   width: 60%;
   height: 150%;
   transform: translateY(-50%) rotate(-20deg);
-  background-color: green;
+  background-color: #00ff66;
 }
 
 .img-container--black-green-bor:before {
@@ -533,7 +533,7 @@ footer a:hover {
   width: 60%;
   height: 150%;
   transform: translateY(-50%) rotate(-20deg);
-  background-color: green;
+  background-color: #ebb91d;
 }
 
 .img-container--yellow-black-bor:before {
@@ -556,7 +556,7 @@ footer a:hover {
   width: 60%;
   height: 150%;
   transform: translateY(-50%) rotate(-20deg);
-  background-color: rgb(243,195,55);
+  background-color: #00ff66;
 }
 
 .img-container--yellow-green-bor:before {
