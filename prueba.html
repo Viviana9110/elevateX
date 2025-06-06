@@ -1,0 +1,4394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Web Support & Hosting Services - Elevate X</title>
+    <!-- Bootstrap core CSS -->
+    <link
+      href="bootstrap_theme/bootstrap.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Custom styles for this template -->
+    <link href="style.css" rel="stylesheet" />
+    <style>
+      /* feature */
+      .stock-ticker li {
+        position: relative;
+        flex: 1;
+        text-align: center;
+        min-width: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .stock-ticker li span {
+        display: inline-block;
+        padding-bottom: 3px;
+        width: fit-content;
+        min-width: 90px;
+        max-width: 120px;
+        text-align: center;
+        opacity: 0.8;
+      }
+      .stock-ticker li:before {
+        content: "";
+        display: block;
+        width: 28px;
+        height: 28px;
+        transform: rotate(132deg) translate(50%);
+        left: 47%;
+        position: absolute;
+        top: -28px;
+        opacity: 0.8;
+      }
+      @keyframes slide {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+      } /* ticker */
+      .stock-ticker {
+        font-size: 15px;
+        padding-block: 8px;
+        z-index: 100;
+        display: flex;
+        user-select: none;
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+        width: 100%;
+      }
+      .stock-ticker ul {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        padding: 0;
+        margin: 0;
+        animation: scroll 48s linear infinite;
+        list-style: none;
+      }
+      .stock-ticker li {
+        margin: 0;
+        padding: 0;
+        transform: translateX(0);
+      }
+      .stock-ticker ul li {
+        flex: 0 0 auto;
+        align-items: center;
+        justify-content: center;
+        padding: 5 10px;
+        flex-shrink: 0;
+        width: auto;
+        text-align: center;
+        min-width: 150px;
+        white-space: nowrap;
+        list-style: none;
+        margin-right: 0;
+        padding-right: 0;
+      }
+      @keyframes scroll {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+    </style>
+    <style>
+      .slide-in-box {
+        display: block;
+        margin-bottom: 5px;
+      }
+      .slide-in-box span {
+        opacity: 0;
+        transform: translateX(-100px);
+        display: inline-block;
+        padding: 0 5px;
+        background-color: transparent;
+        transition: opacity 0.6s ease-out, transform 0.8s ease-out;
+      }
+      .slide-in-box.visible span {
+        opacity: 1;
+        transform: translateX(0);
+        background-color: #f9c924 !important;
+      }
+    </style>
+    <style>
+      /* Hide default accordion icon */
+      .accordion-button::after {
+        display: none !important;
+      } /* Style for the icon wrapper */
+      .icon-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 1px solid currentColor;
+      } /* Style for the icons */
+      .icon-wrapper i {
+        font-size: 14px;
+      } /* Show/hide icons based on accordion state */
+      .accordion-button .minus-icon {
+        display: none;
+      }
+      .accordion-button .plus-icon {
+        display: inline-block;
+      }
+      .accordion-button:not(.collapsed) .minus-icon {
+        display: inline-block;
+      }
+      .accordion-button:not(.collapsed) .plus-icon {
+        display: none;
+      }
+    </style>
+    <style>
+      .brand-edge-accordion-header {
+        cursor: pointer;
+        background-color: black;
+        transition: background-color 0.3s ease;
+      }
+      .accordion-button::after {
+        display: none;
+      } /* Force background color for expanded state */
+      .brand-edge-accordion-header.expanded-header,
+      .brand-edge-accordion-header:hover {
+        color: #000 !important;
+        background: linear-gradient(
+          90deg,
+          rgba(235, 185, 29, 1) 0%,
+          rgba(252, 240, 126, 1) 52%,
+          rgba(255, 215, 70, 1) 100%
+        );
+      }
+    </style>
+    <style>
+      /* Restore Bootstrap carousel indicator styles */
+      .carousel-indicators {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-right: 15%;
+        margin-left: 15%;
+        list-style: none;
+      }
+      .carousel-indicators [data-bs-target] {
+        box-sizing: content-box;
+        flex: 0 1 auto;
+        width: 30px;
+        height: 3px;
+        margin-right: 3px;
+        margin-left: 3px;
+        text-indent: -999px;
+        cursor: pointer;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        opacity: 0.5;
+        transition: opacity 0.6s ease;
+      }
+      .carousel-indicators .active {
+        opacity: 1;
+      }
+    </style>
+    <style>
+      .slide-in-box {
+        display: block;
+        margin-bottom: 5px;
+      }
+      .slide-in-box span {
+        opacity: 0;
+        transform: translateX(-100px);
+        display: inline-block;
+        padding: 0 5px;
+        background-color: transparent;
+        transition: opacity 0.6s ease-out, transform 0.8s ease-out;
+      }
+      .slide-in-box.visible span {
+        opacity: 1;
+        transform: translateX(0);
+        background-color: #f9c924 !important;
+      }
+    </style>
+    <style>
+      .accordion-button {
+        color: #555;
+        font-weight: 500;
+        padding: 1.25rem 0;
+        background-color: transparent;
+        box-shadow: none;
+      }
+      .accordion-button:not(.collapsed) {
+        color: #555;
+        background-color: transparent;
+        box-shadow: none;
+      }
+      .accordion-button:focus {
+        box-shadow: none;
+        border-color: rgba(0, 0, 0, 0.125);
+      }
+      .accordion-button::after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23555' viewBox='0 0 16 16'%3E%3Cpath d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/%3E%3Cpath d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/%3E%3C/svg%3E");
+        width: 1.25rem;
+        height: 1.25rem;
+        background-size: 1.25rem;
+      }
+      .accordion-button:not(.collapsed)::after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23555' viewBox='0 0 16 16'%3E%3Cpath d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/%3E%3Cpath d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/%3E%3C/svg%3E");
+        transform: rotate(0deg);
+      }
+      .accordion-body {
+        padding: 0.5rem 0 1.25rem 0;
+        color: #555;
+      }
+      hr {
+        opacity: 0.1;
+      }
+    </style>
+    <style>
+      /* Custom styles for carousel indicators */
+      #brandingCarouselUnique .carousel-indicators [data-bs-target] {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #f3f3f3;
+        border: none;
+        padding: 0;
+        margin: 0 4px;
+      }
+      #brandingCarouselUnique .carousel-indicators .active {
+        background-color: white;
+      } /* Fix for content visibility and balanced spacing */
+      #brandingCarouselUnique .carousel-item .bg-dark {
+        position: relative;
+        width: 100%;
+        min-height: 400px; /* Increased height to make it longer than white box */
+      }
+      #brandingCarouselUnique .carousel-item .content-wrapper {
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 50px; /* Add space for the fixed title */
+      }
+      @media (max-width: 640px) {
+        #brandingCarouselUnique .carousel-item .content-wrapper {
+          padding-top: 50px;
+        }
+      }
+      @media (max-width: 575px) {
+        #brandingCarouselUnique .carousel-item .content-wrapper {
+          padding-top: 50px;
+        }
+      }
+      @media (min-width: 1200px) {
+        #brandingCarouselUnique .carousel-item .content-wrapper {
+          width: 75%;
+          margin: 0 auto;
+          padding-top: 80px;
+        }
+      } /* White box positioning */
+      #brandingCarouselUnique .white-box {
+        position: absolute;
+        top: 50%;
+        right: -25%;
+        transform: translateY(-50%);
+        width: 280px;
+        z-index: 10;
+      } /* White box positioning  Graphic design */
+      .gd #brandingCarouselUnique .white-box {
+        position: absolute;
+        top: 50%;
+        right: -34%;
+        transform: translateY(-50%);
+        width: 414px;
+        z-index: 10;
+      }
+      @media (min-width: 1200px) and (max-width: 1400px) {
+        .gd #brandingCarouselUnique .white-box {
+          right: -45%;
+        }
+      } /* Navigation positioning - moved to bottom center */
+      #brandingCarouselUnique .navigation-container {
+        position: absolute;
+        bottom: -40%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+      } /* Center the carousel container */
+      .carousel-container {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+      } /* Icon image styling */
+      .icon-image {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+      }
+      .icon-circle .icon-image {
+        width: 50px;
+        height: 50px;
+        filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg) brightness(2);
+      }
+    </style>
+    <style>
+      /* CSS to control icon visibility based on accordion state */
+      .accordion-button .icon-wrapper .plus-icon {
+        display: inline-block;
+      }
+      .accordion-button .icon-wrapper .minus-icon {
+        display: none;
+      }
+      .accordion-button:not(.collapsed) .icon-wrapper .plus-icon {
+        display: none;
+      }
+      .accordion-button:not(.collapsed) .icon-wrapper .minus-icon {
+        display: inline-block;
+      } /* Hide default accordion arrow */
+      .accordion-button::after {
+        display: none;
+      } /* Fix alignment issues */
+      .accordion-button {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-right: 50px; /* Make room for the icon */
+      }
+      .accordion-button .icon-wrapper {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      #FAQ .accordion-button .icon-wrapper {
+        left: 0;
+      }
+      #brandFAQ .accordion-button .icon-wrapper {
+        right: 0;
+      }
+    </style>
+    <style>
+      /* Hide default accordion icon */
+      .accordion-button::after {
+        display: none !important;
+      } /* Style for the icon wrapper */
+      .icon-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 28px;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        border: 1px solid currentColor;
+        flex-shrink: 0;
+        position: relative;
+      } /* Style for the icons */
+      .icon-wrapper i {
+        font-size: 14px;
+        position: absolute;
+      } /* Show/hide icons based on accordion state */
+      .accordion-button .minus-icon {
+        display: none;
+      }
+      .accordion-button .plus-icon {
+        display: inline-block;
+      }
+      .accordion-button:not(.collapsed) .minus-icon {
+        display: inline-block;
+      }
+      .accordion-button:not(.collapsed) .plus-icon {
+        display: none;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:900,700,400,500&display=swap"
+    />
+  </head>
+  <body>
+    <header>
+      <nav
+        class="bg-transparent fixed-top navbar navbar-expand-lg navbar-light"
+      >
+        <div class="container-fluid p-0 py-1" style="max-width: 95%">
+          <a class="navbar-brand" href="/"
+            ><img
+              src="assets/images/logo.png"
+              alt="Brand Logo"
+              class="img-fluid"
+              style="max-width: 150px"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav fs-5 gap-4 mx-auto">
+              <li class="nav-item">
+                <a
+                  class="active fs-18 fw-normal nav-link text-uppercase text-warning"
+                  aria-current="page"
+                  href="#"
+                  >About Us</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="fs-18 fw-normal nav-link text-uppercase text-warning"
+                  href="branding.html"
+                  >Services</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="fs-18 fw-normal nav-link text-uppercase text-warning"
+                  href="#"
+                  >CareerS</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="fs-18 fw-normal nav-link text-uppercase text-warning"
+                  href="#"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+            <div class="d-flex align-items-center gap-2">
+              <a href="#" class="social-icon"
+                ><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <button
+                class="border-0 btn btn-gradient fs-6 fw-bold ms-4 px-4 text-uppercase"
+              >
+                Get a Quote
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section
+        class="bg-dark service-hero vh-100"
+        style="
+          position: relative;
+          overflow: hidden;
+          height: 100vh;
+          background-image: url('assets/images/developer-identifying-server-issues_482257-81365%20(1).jpg');
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+        "
+      >
+        <div
+          class="overlay"
+          style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: 0.7;
+          "
+        ></div>
+        <div
+          class="align-items-center container-fluid d-flex flex-column justify-content-center text-white vh-100"
+          style="position: relative; z-index: 2; background-repeat: no-repeat"
+        >
+          <div
+            class="align-items-center d-flex flex-column justify-content-center"
+          >
+            <h1
+              class="display-5 fw-bolder lh-1 text-center text-uppercase text-warning"
+            >
+              Web Support &amp; Hosting Services
+            </h1>
+            <p class="fs-18 fw-semibold py-4 text-center">
+              <span class="fs-3 fw-semibold py-4 text-center"
+                >Ensure Uptime, Speed, and Security&mdash;Your Website Deserves
+                Nothing Less.</span
+              >
+            </p>
+            <div
+              class="align-items-center column-gap-2 d-flex flex-column"
+            ></div>
+          </div>
+        </div>
+        <div class="container-fluid text-rotater-container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="py-4 stock-ticker">
+                <ul>
+                  <li
+                    class="text-center text-uppercase text-white-50 fw-bold h3"
+                  >
+                    Start<span
+                      class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase"
+                      >A Project
+                    </span>
+                  </li>
+                  <li
+                    class="text-center text-uppercase text-white-50 fw-bold h3"
+                  >
+                    SOAR<span
+                      class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase"
+                      >BEYOND LIMITS</span
+                    >
+                  </li>
+                  <li
+                    class="text-center text-uppercase text-white-50 fw-bold h3"
+                  >
+                    PEAK<span
+                      class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase"
+                      >PERFORMANCE</span
+                    >
+                  </li>
+                  <li
+                    class="text-center text-uppercase text-white-50 fw-bold h3"
+                  >
+                    ELEVATE<span
+                      class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase"
+                      >DON'T HESITATE</span
+                    >
+                  </li>
+                  <li
+                    class="text-center text-uppercase text-white-50 fw-bold h3"
+                  >
+                    SUCCESS<span
+                      class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase"
+                      >FUELS SUCCESS</span
+                    >
+                  </li>
+                  <li
+                    class="text-center text-uppercase text-white-50 fw-bold h3"
+                  >
+                    RISE<span
+                      class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase"
+                      >WITH PURPOSE</span
+                    >
+                  </li>
+                  <li
+                    class="text-center text-uppercase text-white-50 fw-bold h3"
+                  >
+                    UPWARD<span
+                      class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase"
+                      >BOND</span
+                    >
+                  </li>
+                  <li
+                    class="text-center text-uppercase text-white-50 fw-bold h3"
+                  >
+                    THRIVE<span
+                      class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase"
+                      >AND RISE</span
+                    >
+                  </li>
+                  <li
+                    class="text-center text-uppercase text-white-50 fw-bold h3"
+                  >
+                    Start<span
+                      class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase"
+                      >A Project
+                    </span>
+                  </li>
+                  <li
+                    class="text-center text-uppercase text-white-50 fw-bold h3"
+                  >
+                    SOAR<span
+                      class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase"
+                      >BEYOND LIMITS</span
+                    >
+                  </li>
+                  <li
+                    class="text-center text-uppercase text-white-50 fw-bold h3"
+                  >
+                    PEAK<span
+                      class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase"
+                      >PERFORMANCE</span
+                    >
+                  </li>
+                  <li
+                    class="text-center text-uppercase text-white-50 fw-bold h3"
+                  >
+                    ELEVATE<span
+                      class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase"
+                      >DON'T HESITATE</span
+                    >
+                  </li>
+                  <li
+                    class="text-center text-uppercase text-white-50 fw-bold h3"
+                  >
+                    SUCCESS<span
+                      class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase"
+                      >FUELS SUCCESS</span
+                    >
+                  </li>
+                  <li
+                    class="text-center text-uppercase text-white-50 fw-bold h3"
+                  >
+                    RISE<span
+                      class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase"
+                      >WITH PURPOSE</span
+                    >
+                  </li>
+                  <li
+                    class="text-center text-uppercase text-white-50 fw-bold h3"
+                  >
+                    UPWARD<span
+                      class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase"
+                      >BOND</span
+                    >
+                  </li>
+                  <li
+                    class="text-center text-uppercase text-white-50 fw-bold h3"
+                  >
+                    THRIVE<span
+                      class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase"
+                      >AND RISE</span
+                    >
+                  </li>
+                  <li
+                    class="text-center text-uppercase text-white-50 fw-bold h3"
+                  >
+                    Start<span
+                      class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase"
+                      >A Project
+                    </span>
+                  </li>
+                  <li
+                    class="text-center text-uppercase text-white-50 fw-bold h3"
+                  >
+                    SOAR<span
+                      class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase"
+                      >BEYOND LIMITS</span
+                    >
+                  </li>
+                  <li
+                    class="text-center text-uppercase text-white-50 fw-bold h3"
+                  >
+                    PEAK<span
+                      class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase"
+                      >PERFORMANCE</span
+                    >
+                  </li>
+                  <li
+                    class="text-center text-uppercase text-white-50 fw-bold h3"
+                  >
+                    ELEVATE<span
+                      class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase"
+                      >DON'T HESITATE</span
+                    >
+                  </li>
+                  <li
+                    class="text-center text-uppercase text-white-50 fw-bold h3"
+                  >
+                    SUCCESS<span
+                      class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase"
+                      >FUELS SUCCESS</span
+                    >
+                  </li>
+                  <li
+                    class="text-center text-uppercase text-white-50 fw-bold h3"
+                  >
+                    RISE<span
+                      class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase"
+                      >WITH PURPOSE</span
+                    >
+                  </li>
+                  <li
+                    class="text-center text-uppercase text-white-50 fw-bold h3"
+                  >
+                    UPWARD<span
+                      class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase"
+                      >BOND</span
+                    >
+                  </li>
+                  <li
+                    class="text-center text-uppercase text-white-50 fw-bold h3"
+                  >
+                    THRIVE<span
+                      class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase"
+                      >AND RISE</span
+                    >
+                  </li>
+                  <li
+                    class="text-center text-uppercase text-white-50 fw-bold h3"
+                  >
+                    Start<span
+                      class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase"
+                      >A Project
+                    </span>
+                  </li>
+                  <li
+                    class="text-center text-uppercase text-white-50 fw-bold h3"
+                  >
+                    SOAR<span
+                      class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase"
+                      >BEYOND LIMITS</span
+                    >
+                  </li>
+                  <li
+                    class="text-center text-uppercase text-white-50 fw-bold h3"
+                  >
+                    PEAK<span
+                      class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase"
+                      >PERFORMANCE</span
+                    >
+                  </li>
+                  <li
+                    class="text-center text-uppercase text-white-50 fw-bold h3"
+                  >
+                    ELEVATE<span
+                      class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase"
+                      >DON'T HESITATE</span
+                    >
+                  </li>
+                  <li
+                    class="text-center text-uppercase text-white-50 fw-bold h3"
+                  >
+                    SUCCESS<span
+                      class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase"
+                      >FUELS SUCCESS</span
+                    >
+                  </li>
+                  <li
+                    class="text-center text-uppercase text-white-50 fw-bold h3"
+                  >
+                    RISE<span
+                      class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase"
+                      >WITH PURPOSE</span
+                    >
+                  </li>
+                  <li
+                    class="text-center text-uppercase text-white-50 fw-bold h3"
+                  >
+                    UPWARD<span
+                      class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase"
+                      >BOND</span
+                    >
+                  </li>
+                  <li
+                    class="text-center text-uppercase text-white-50 fw-bold h3"
+                  >
+                    THRIVE<span
+                      class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase"
+                      >AND RISE</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="bg-primary brand-standout-sec py-5"
+        style="background-color: #000"
+      >
+        <div class="container-xxl py-md-5">
+          <div class="justify-content-center py-md-5 row">
+            <div class="col-lg-12 col-md-10">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center text-center text-white"
+                style="position: relative; z-index: 2"
+              >
+                <div class="d-flex flex-column justify-content-center">
+                  <h2 class="display-5 fw-bolder lh-1">
+                    Reliable Support, Infrastructure, Real Results.
+                  </h2>
+                  <p class="fs-3 fw-bolder h4 pb-4 title-border">
+                    The Power of Proactive Hosting and 24/7 Technical Support
+                  </p>
+                  <p class="fw-semibold h4 mt-4">
+                    Amid the fast-evolving digital landscape, a slow, unsecure,
+                    or unreliable website can
+                    <span class="d-lg-block"
+                      >quickly damage conversions, credibility, and long-term
+                      business growth.</span
+                    >
+                  </p>
+                  <p
+                    class="align-self-center fw-normal h4 mb-2 mt-4 mw-100 w-75"
+                  >
+                    <span class="text-warning">Elevate X Digital Solutions</span
+                    >, high-performance hosting and expert support to keep your
+                    website optimized, protected, and running smoothly while you
+                    <span class="text-warning"> grow your business</span>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="hero"
+        style="position: relative; overflow: hidden; height: 100vh"
+      >
+        <video
+          style="
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+          "
+          src="assets/videos/A%20-%20Chatbot.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          loading="lazy"
+        >
+          <source
+            type="video/mp4"
+            loading="lazy"
+            src="assets/videos/A%20-%20Chatbot.mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+        <div
+          class="overlay z-n1"
+          style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: 0.3;
+          "
+        ></div>
+        <div
+          class="container d-flex flex-column justify-content-center text-white vh-100 z-3"
+        >
+          <div class="row">
+            <div class="col-md-8 d-flex flex-column justify-content-center">
+              <h2 class="display-5 fw-bolder lh-1 text-warning">
+                <span class="d-block">Unbreakable</span>
+                <span class="d-block"
+                  ><span>Web Support &amp; Hosting</span></span
+                >For Business
+              </h2>
+              <p class="fs-18 fw-normal mb-0 py-4">
+                We combine fast, secure hosting with proactive
+                <span class="d-md-block"
+                  >maintenance, updates, and troubleshooting to ensure</span
+                >
+                your digital presence stays smooth, stable, and scalable.
+              </p>
+              <div class="column-gap-2 d-flex flex-column">
+                <div class="align-items-start column-gap-4 d-flex flex-column">
+                  <span class="fs-5 text-success">Stop Losing Visitors</span
+                  ><a
+                    class="align-self-start btn fs-18 fs-6 fw-bold grad-btn py-3 text-dark text-uppercase"
+                    href="#"
+                    role="button"
+                    >KEEP YOUR SITE FAST, SAFE, AND ONLINE</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="mb-md-5 pt-md-5 py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5">
+              <h2
+                class="display-4 fw-bolder lh-sm text-primary animate-on-scroll"
+              >
+                <div class="slide-in-box">
+                  <span>Great Websites</span>
+                </div>
+                <div class="slide-in-box">
+                  <span>Run&nbsp;on&nbsp;Great</span>
+                </div>
+                <div class="slide-in-box"><span>Infrastructure</span></div>
+              </h2>
+              <p class="fs-18">
+                We provide hosting and support solutions designed to deliver
+                uninterrupted performance and peace of mind.
+              </p>
+              <div
+                class="align-items-start column-gap-4 d-flex flex-column mt-5"
+              >
+                <span class="fs-5">Ready for Rock-Solid Hosting?</span>
+                <a
+                  class="align-self-start btn fs-18 fs-6 fw-bold grad-btn lh-sm py-3 text-dark text-uppercase"
+                  href="#"
+                  role="button"
+                  >SCHEDULE YOUR SITE AUDIT</a
+                >
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div class="row">
+                <div class="col-12">
+                  <div class="accordion lead-gen" id="brandFAQ">
+                    <div class="row">
+                      <!-- Left Column -->
+                      <div class="col-md-12">
+                        <!-- FAQ Item 1 (Expanded) -->
+                        <div class="accordion-item border-0">
+                          <h3 class="accordion-header" id="headingOne">
+                            <button
+                              class="accordion-button fs-3 justify-content-end text-primary"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseOne"
+                              aria-expanded="true"
+                              aria-controls="collapseOne"
+                            >
+                              High-Speed Hosting Infrastructure<span
+                                class="icon-wrapper"
+                                ><i class="fa fa-plus plus-icon"></i
+                                ><i class="fa fa-minus minus-icon"></i>
+                              </span>
+                            </button>
+                          </h3>
+                          <div
+                            id="collapseOne"
+                            class="accordion-collapse collapse show"
+                            aria-labelledby="headingOne"
+                            data-bs-parent="#brandFAQ"
+                          >
+                            <div class="accordion-body text-end">
+                              <p class="fs-18">
+                                Optimized servers and CDN integration deliver
+                                lightning-fast load times, keeping users engaged
+                                and minimizing website bounce rates effectively.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr class="my-0" />
+                        <!-- FAQ Item 2 (Collapsed) -->
+                        <div class="accordion-item border-0">
+                          <h3 class="accordion-header" id="headingTwo">
+                            <button
+                              class="accordion-button fs-3 justify-content-end text-primary"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseTwo"
+                              aria-expanded="false"
+                              aria-controls="collapseTwo"
+                            >
+                              Advanced Security &amp; Threat Protection<span
+                                class="icon-wrapper"
+                                ><i class="fa fa-plus plus-icon"></i
+                                ><i class="fa fa-minus minus-icon"></i>
+                              </span>
+                            </button>
+                          </h3>
+                          <div
+                            id="collapseTwo"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="headingTwo"
+                            data-bs-parent="#brandFAQ"
+                          >
+                            <div class="accordion-body text-end">
+                              <p class="fs-18">
+                                Daily security scans, firewalls, SSL encryption,
+                                and real-time threat monitoring protect your
+                                website from hackers, breaches, and malware
+                                threats.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr class="my-0" />
+                        <!-- FAQ Item 3 (Collapsed) -->
+                        <div class="accordion-item border-0">
+                          <h3 class="accordion-header" id="headingThree">
+                            <button
+                              class="accordion-button fs-3 justify-content-end text-primary"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseThree"
+                              aria-expanded="false"
+                              aria-controls="collapseThree"
+                            >
+                              Technical Support on Demand<span
+                                class="icon-wrapper"
+                                ><i class="fa fa-plus plus-icon"></i
+                                ><i class="fa fa-minus minus-icon"></i>
+                              </span>
+                            </button>
+                          </h3>
+                          <div
+                            id="collapseThree"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="headingThree"
+                            data-bs-parent="#brandFAQ"
+                          >
+                            <div class="accordion-body text-end">
+                              <p class="fs-18">
+                                Our expert support team is available 24/7 to fix
+                                issues, apply updates, and prevent unnecessary
+                                website downtime quickly.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Right Column -->
+                      <div class="col-md-12">
+                        <!-- FAQ Item 4 (Collapsed) -->
+                        <div class="accordion-item border-0">
+                          <h3 class="accordion-header" id="headingFour">
+                            <button
+                              class="accordion-button fs-3 justify-content-end text-primary"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseFour"
+                              aria-expanded="false"
+                              aria-controls="collapseFour"
+                            >
+                              Managed Backups &amp; Recovery<span
+                                class="icon-wrapper"
+                                ><i class="fa fa-plus plus-icon"></i
+                                ><i class="fa fa-minus minus-icon"></i>
+                              </span>
+                            </button>
+                          </h3>
+                          <div
+                            id="collapseFour"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="headingFour"
+                            data-bs-parent="#brandFAQ"
+                          >
+                            <div class="accordion-body text-end">
+                              <p class="fs-18">
+                                Automated daily backups protect critical website
+                                data, ensuring quick and secure recovery during
+                                unexpected outages or technical failures.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr class="my-0" />
+                        <!-- FAQ Item 5 (Collapsed) -->
+                        <div class="accordion-item border-0">
+                          <h3 class="accordion-header" id="headingFive">
+                            <button
+                              class="accordion-button fs-3 justify-content-end text-primary"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseFive"
+                              aria-expanded="false"
+                              aria-controls="collapseFive"
+                            >
+                              Ongoing Website Maintenance<span
+                                class="icon-wrapper"
+                                ><i class="fa fa-plus plus-icon"></i
+                                ><i class="fa fa-minus minus-icon"></i>
+                              </span>
+                            </button>
+                          </h3>
+                          <div
+                            id="collapseFive"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="headingFive"
+                            data-bs-parent="#brandFAQ"
+                          >
+                            <div class="accordion-body text-end">
+                              <p class="fs-18">
+                                We manage updates, plugins, performance
+                                optimizations, and security patches to keep your
+                                website running safely, securely, and smoothly.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr class="my-0" />
+                        <!-- FAQ Item 6 (Collapsed) -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-black p-2 px-md-0 py-md-5">
+        <div
+          class="bg-dark blk-accord-mob-w container-fluid ms-0 p-md-5 px-2 py-3 w-75"
+        >
+          <div class="dark-accor ps-0 ps-md-5 row">
+            <div class="col-md-12">
+              <h2 class="display-5 fw-bolder lh-1 text-warning">
+                Hosting Built for the Digital Edge
+              </h2>
+              <p class="fs-18 text-white">
+                Elevate X delivers hosting systems and web support that scale
+                with your business and deliver reliable performance across all
+                devices.
+              </p>
+              <div
+                class="accordion custom-accordion-section-123"
+                id="brandEdge"
+              >
+                <!-- First Accordion Item (Orange, Initially Open) -->
+                <div
+                  class="accordion-item border-0 mb-3"
+                  style="background-color: transparent"
+                >
+                  <h3 class="accordion-header" id="headingOne123">
+                    <button
+                      class="brand-edge-accordion-header d-flex align-items-center p-3 text-white border-0 w-100"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#brandEdgeCollapseOne123"
+                      aria-expanded="true"
+                      aria-controls="brandEdgeCollapseOne123"
+                    >
+                      <i
+                        class="fa fa-minus custom-toggle-icon-123 me-2 fs-3"
+                      ></i>
+                      <span
+                        class="fw-semibold mb-0 text-capitalize text-start"
+                        style="letter-spacing: 1px"
+                        >Performance Optimization</span
+                      >
+                    </button>
+                  </h3>
+                  <div
+                    id="brandEdgeCollapseOne123"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="headingOne123"
+                    data-bs-parent="#brandEdge"
+                  >
+                    <div class="p-3 text-white">
+                      <p class="fs-18">
+                        We fine-tune load speeds, optimize caching, and improve
+                        time-to-first-byte for better rankings and UX.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Second Accordion Item (Black, Initially Closed) -->
+                <div
+                  class="accordion-item border-0 mb-3"
+                  style="background-color: transparent"
+                >
+                  <h3 class="accordion-header" id="headingTwo123">
+                    <button
+                      class="brand-edge-accordion-header d-flex align-items-center p-3 text-white border-0 w-100"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#brandEdgeCollapseTwo123"
+                      aria-expanded="false"
+                      aria-controls="brandEdgeCollapseTwo123"
+                    >
+                      <i
+                        class="fa fa-plus custom-toggle-icon-123 me-2 fs-3"
+                      ></i>
+                      <span
+                        class="fw-semibold mb-0 text-capitalize text-start"
+                        style="letter-spacing: 1px"
+                        >Uptime Monitoring &amp; Alerts</span
+                      >
+                    </button>
+                  </h3>
+                  <div
+                    id="brandEdgeCollapseTwo123"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingTwo123"
+                    data-bs-parent="#brandEdge"
+                  >
+                    <div class="p-3 text-white">
+                      <p class="fs-18">
+                        Stay online 24/7. We monitor your site and respond
+                        instantly to any outages or slowdowns.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Third Accordion Item (Orange, Initially Closed) -->
+                <div
+                  class="accordion-item border-0 mb-3"
+                  style="background-color: transparent"
+                >
+                  <h3 class="accordion-header" id="headingThree123">
+                    <button
+                      class="brand-edge-accordion-header d-flex align-items-center p-3 text-white border-0 w-100"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#brandEdgeCollapseThree123"
+                      aria-expanded="false"
+                      aria-controls="brandEdgeCollapseThree123"
+                    >
+                      <i
+                        class="fa fa-plus custom-toggle-icon-123 me-2 fs-3"
+                      ></i>
+                      <span
+                        class="fw-semibold mb-0 text-capitalize text-start"
+                        style="letter-spacing: 1px"
+                        >Support Ticket System Integration</span
+                      >
+                    </button>
+                  </h3>
+                  <div
+                    id="brandEdgeCollapseThree123"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingThree123"
+                    data-bs-parent="#brandEdge"
+                  >
+                    <div class="p-3 text-white">
+                      <p class="fs-18">
+                        Connect support requests directly to your CRM or
+                        helpdesk for fast, traceable resolutions.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Fourth Accordion Item (Black, Initially Closed) -->
+                <div
+                  class="accordion-item border-0 mb-3"
+                  style="background-color: transparent"
+                >
+                  <h3 class="accordion-header" id="headingFour123">
+                    <button
+                      class="brand-edge-accordion-header d-flex align-items-center p-3 text-white border-0 w-100"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#brandEdgeCollapseFour123"
+                      aria-expanded="false"
+                      aria-controls="brandEdgeCollapseFour123"
+                    >
+                      <i
+                        class="fa fa-plus custom-toggle-icon-123 me-2 fs-3"
+                      ></i>
+                      <span
+                        class="fw-semibold mb-0 text-capitalize text-start"
+                        style="letter-spacing: 1px"
+                        >Multisite &amp; High-Traffic Scaling</span
+                      >
+                    </button>
+                  </h3>
+                  <div
+                    id="brandEdgeCollapseFour123"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingFour123"
+                    data-bs-parent="#brandEdge"
+                  >
+                    <div class="p-3 text-white">
+                      <p class="fs-18">
+                        Got multiple sites or traffic spikes? We manage
+                        resources dynamically to maintain performance.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Fifth Accordion Item (Black, Initially Closed) -->
+                <div
+                  class="accordion-item border-0 mb-3"
+                  style="background-color: transparent"
+                >
+                  <h3 class="accordion-header" id="headingFive123">
+                    <button
+                      class="brand-edge-accordion-header d-flex align-items-center p-3 text-white border-0 w-100"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#brandEdgeCollapseFive123"
+                      aria-expanded="false"
+                      aria-controls="brandEdgeCollapseFive123"
+                    >
+                      <i
+                        class="fa fa-plus custom-toggle-icon-123 me-2 fs-3"
+                      ></i>
+                      <span
+                        class="fw-semibold mb-0 text-capitalize text-start"
+                        style="letter-spacing: 1px"
+                        >Analytics &amp; Performance Dashboards</span
+                      >
+                    </button>
+                  </h3>
+                  <div
+                    id="brandEdgeCollapseFive123"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingFive123"
+                    data-bs-parent="#brandEdge"
+                  >
+                    <div class="p-3 text-white">
+                      <p class="fs-18">
+                        See real-time reports on uptime, performance, page
+                        speed, and server usage&mdash;all in one place.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="align-items-start column-gap-4 d-flex flex-column mt-5"
+              >
+                <span class="fs-5 text-success"
+                  >Let&rsquo;s Stabilize and Scale Your Web Presence</span
+                >
+                <a
+                  class="align-self-start btn fs-18 fs-6 fw-bold grad-btn py-3 text-dark text-uppercase"
+                  href="#"
+                  role="button"
+                  >BOOK A STRATEGY CALL
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="border-1 border-top border-warning branding-section gd overflow-hidden py-5"
+        style="
+          background: linear-gradient(
+            0deg,
+            rgba(3, 3, 55, 1) 0%,
+            rgba(11, 12, 13, 1) 100%
+          );
+        "
+      >
+        <div class="container py-5 z-3">
+          <div class="row justify-content-center">
+            <div class="carousel-container col-lg-10">
+              <div
+                class="bg-dark col-12 col-lg-9 iconbx-mob-center mx-auto py-3 py-md-5"
+                style="
+                  left: -31%;
+                  position: relative;
+                  transform: translateX(25%);
+                "
+              >
+                <div
+                  id="brandingCarouselUnique"
+                  class="carousel slide position-relative"
+                  data-bs-ride="false"
+                  data-bs-interval="false"
+                  data-bs-touch="true"
+                >
+                  <div class="carousel-inner">
+                    <!-- First slide -->
+                    <div
+                      class="carousel-item active"
+                      id="strategies-slide-unique"
+                    >
+                      <!-- Main black panel -->
+                      <div class="text-center p-4 p-md-5">
+                        <div class="content-wrapper">
+                          <!-- Fixed title inside the black box -->
+                          <div
+                            class="align-items-center d-flex justify-content-center mb-3 mt-4"
+                          >
+                            <div
+                              class="align-items-center d-flex icon-circle justify-content-center"
+                              style="width: 50px; height: 50px"
+                            >
+                              <img
+                                src="assets/images/image%20(45).png"
+                                class="icon-image"
+                                loading="lazy"
+                              />
+                            </div>
+                            <div class="text-start">
+                              <h3 class="h2 mb-0 ms-4 text-white">
+                                Enterprise-Grade Servers
+                              </h3>
+                            </div>
+                          </div>
+                          <p class="fs-18 mb-0 text-white">
+                            We deploy your site on enterprise-grade,
+                            ultra-reliable servers built for maximum speed,
+                            uptime, security, and scalable growth
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Additional slides (hidden in the image but needed for carousel functionality) -->
+                    <div class="carousel-item" id="insights-slide-unique">
+                      <div class="text-center p-4 p-md-5">
+                        <div class="content-wrapper">
+                          <!-- Fixed title placeholder to maintain spacing -->
+                          <div
+                            class="align-items-center d-flex justify-content-center mb-3 mt-4"
+                          >
+                            <div
+                              class="align-items-center d-flex icon-circle justify-content-center"
+                              style="width: 50px; height: 50px"
+                            >
+                              <img
+                                src="assets/images/image%20(46).png"
+                                class="icon-image"
+                                style="/* width: 30px */ /* height: 30px */"
+                                loading="lazy"
+                              />
+                            </div>
+                            <div class="text-start">
+                              <h3 class="h2 mb-0 ms-3 text-white">
+                                Cybersecurity Included
+                              </h3>
+                            </div>
+                          </div>
+                          <p class="fs-18 mb-0 text-white">
+                            Your site is protected with SSL certificates,
+                            malware removal, firewalls, and the latest advanced
+                            cybersecurity protocols, automatically included.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item" id="experience-slide-unique">
+                      <div class="text-center p-4 p-md-5">
+                        <div class="content-wrapper">
+                          <!-- Fixed title placeholder to maintain spacing -->
+                          <div
+                            class="align-items-center d-flex justify-content-center mb-3 mt-4"
+                          >
+                            <div
+                              class="align-items-center d-flex icon-circle justify-content-center"
+                              style="width: 50px; height: 50px"
+                            >
+                              <img
+                                src="assets/images/image%20(47).png"
+                                class="icon-image"
+                                style="height: 65px"
+                                loading="lazy"
+                              />
+                            </div>
+                            <div class="text-start">
+                              <h3 class="h2 mb-0 ms-2 ms-3 text-white">
+                                Hands-On Support Team
+                              </h3>
+                            </div>
+                          </div>
+                          <p class="fs-18 mb-0 text-white">
+                            No bots. Real experts provide fast, personalized
+                            technical support, troubleshooting, and guidance
+                            whenever your business needs critical assistance.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item" id="perfect-slide-unique">
+                      <div class="text-center p-4 p-md-5">
+                        <div class="content-wrapper">
+                          <!-- Fixed title placeholder to maintain spacing -->
+                          <div
+                            class="align-items-center d-flex justify-content-center mb-3 mt-4"
+                          >
+                            <div
+                              class="align-items-center d-flex icon-circle justify-content-center"
+                              style="width: 50px; height: 50px"
+                            >
+                              <img
+                                src="assets/images/image%20(48).png"
+                                class="icon-image"
+                                style="/* width: 30px */ /* height: 30px */"
+                                loading="lazy"
+                              />
+                            </div>
+                            <div class="text-start">
+                              <h3 class="h2 mb-0 ms-4 text-white">
+                                Hosting Built for Growth
+                              </h3>
+                            </div>
+                          </div>
+                          <p class="fs-18 mb-0 text-white">
+                            Our scalable hosting solutions evolve alongside your
+                            growing business needs, offering seamless upgrades
+                            without interruptions or performance loss.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item" id="omnichannel-slide-unique">
+                      <div class="text-center p-4 p-md-5">
+                        <div class="content-wrapper">
+                          <!-- Fixed title placeholder to maintain spacing -->
+                          <div
+                            class="align-items-center d-flex justify-content-center mb-3 mt-4"
+                          >
+                            <div
+                              class="align-items-center d-flex icon-circle justify-content-center"
+                              style="width: 50px; height: 50px"
+                            >
+                              <img
+                                src="assets/images/image%20(49).png"
+                                class="icon-image"
+                                loading="lazy"
+                              />
+                            </div>
+                            <div class="text-start">
+                              <h3 class="h2 mb-0 ms-3 text-white">
+                                Integrated Monitoring &amp; Insights
+                              </h3>
+                            </div>
+                          </div>
+                          <p class="fs-18 mb-0 text-white">
+                            Get full visibility into uptime, performance,
+                            security status, and visitor trends through
+                            real-time dashboards and detailed monitoring
+                            reports.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item" id="optimization-slide-unique">
+                      <div class="p-5 text-center">
+                        <div class="content-wrapper">
+                          <!-- Fixed title placeholder to maintain spacing -->
+                          <div
+                            class="align-items-center d-flex justify-content-center mb-3 mt-4"
+                          >
+                            <div
+                              class="align-items-center d-flex icon-circle justify-content-center"
+                              style="width: 50px; height: 50px"
+                            >
+                              <img
+                                src="assets/images/image%20(50).png"
+                                class="icon-image"
+                                style="width: 65px; height: 65px"
+                                loading="lazy"
+                              />
+                            </div>
+                            <div class="text-start">
+                              <h3 class="h2 mb-0 ms-3 text-white">
+                                Seamless Migration &amp; Setup
+                              </h3>
+                            </div>
+                          </div>
+                          <p class="fs-18 mb-0 text-white">
+                            We manage every step of your migration
+                            carefully&mdash;ensuring zero downtime, zero data
+                            loss, and a stress-free transition.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Fixed title that remains visible across all slides -->
+                  <div
+                    class="position-absolute"
+                    style="top: 0px; left: 0; width: 100%; z-index: 5"
+                  >
+                    <h2 class="fw-bold text-center text-uppercase text-warning">
+                      Why Choose
+                      <span class="d-block text-success">Elevate X</span> for
+                      Web Support & Hosting
+                    </h2>
+                  </div>
+                  <!-- White card overlay (stays fixed across all slides) -->
+                  <div class="bg-white d-none d-xl-block p-4 shadow white-box">
+                    <p class="fw-bold mb-3 text-muted text-uppercase">
+                      Secure. Scalable. Service-First.
+                    </p>
+                    <ul class="list-unstyled">
+                      <li class="d-flex align-items-center mb-2">
+                        <a
+                          href="javascript:void(0)"
+                          class="align-items-center custom-nav-link d-flex fs-5 fw-semibold text-decoration-none text-primary"
+                          data-slide-index="0"
+                          ><span
+                            class="align-items-center bg-black d-inline-flex justify-content-center me-2"
+                            style="width: 14px; height: 3px"
+                          >
+                          </span>
+                          Enterprise-Grade Servers</a
+                        >
+                      </li>
+                      <li class="d-flex align-items-center mb-2">
+                        <a
+                          href="javascript:void(0)"
+                          class="align-items-center custom-nav-link d-flex fs-5 fw-semibold text-decoration-none text-primary"
+                          data-slide-index="1"
+                          ><span
+                            class="align-items-center bg-black d-inline-flex justify-content-center me-2"
+                            style="width: 14px; height: 3px"
+                          >
+                          </span>
+                          Cybersecurity Included</a
+                        >
+                      </li>
+                      <li class="d-flex align-items-center mb-2">
+                        <a
+                          href="javascript:void(0)"
+                          class="align-items-center custom-nav-link d-flex fs-5 fw-semibold text-decoration-none text-primary"
+                          data-slide-index="2"
+                          ><span
+                            class="align-items-center bg-black d-inline-flex justify-content-center me-2"
+                            style="width: 14px; height: 3px"
+                          >
+                          </span>
+                          Hands-On Support Team</a
+                        >
+                      </li>
+                      <li class="d-flex align-items-center mb-2">
+                        <a
+                          href="javascript:void(0)"
+                          class="align-items-center custom-nav-link d-flex fs-5 fw-semibold text-decoration-none text-primary"
+                          data-slide-index="3"
+                          ><span
+                            class="align-items-center bg-black d-inline-flex justify-content-center me-2"
+                            style="width: 14px; height: 3px"
+                          >
+                          </span>
+                          Hosting Built for Growth</a
+                        >
+                      </li>
+                      <li class="d-flex align-items-center mb-2">
+                        <a
+                          href="javascript:void(0)"
+                          class="align-items-center custom-nav-link d-flex fs-5 fw-semibold text-decoration-none text-primary"
+                          data-slide-index="4"
+                          ><span
+                            class="align-items-center bg-black d-inline-flex justify-content-center me-2"
+                            style="width: 14px; height: 3px"
+                          >
+                          </span>
+                          Integrated Monitoring &amp; Insights</a
+                        >
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <a
+                          href="javascript:void(0)"
+                          class="align-items-center custom-nav-link d-flex fs-5 fw-semibold text-decoration-none text-primary"
+                          data-slide-index="5"
+                          ><span
+                            class="align-items-center bg-black d-inline-flex justify-content-center me-2"
+                            style="width: 14px; height: 3px"
+                          >
+                          </span>
+                          Seamless Migration &amp; Setup</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Navigation controls container - moved to bottom center -->
+                  <div class="navigation-container">
+                    <!-- Carousel indicators (dots) -->
+                    <div
+                      class="carousel-indicators position-static m-0 me-2 d-flex align-items-center"
+                    >
+                      <button
+                        type="button"
+                        data-bs-target="#brandingCarouselUnique"
+                        data-bs-slide-to="0"
+                        class="custom-indicator active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                        data-slide-index="0"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#brandingCarouselUnique"
+                        data-bs-slide-to="1"
+                        class="custom-indicator"
+                        aria-label="Slide 2"
+                        data-slide-index="1"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#brandingCarouselUnique"
+                        data-bs-slide-to="2"
+                        class="custom-indicator"
+                        aria-label="Slide 3"
+                        data-slide-index="2"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#brandingCarouselUnique"
+                        data-bs-slide-to="3"
+                        class="custom-indicator"
+                        aria-label="Slide 4"
+                        data-slide-index="3"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#brandingCarouselUnique"
+                        data-bs-slide-to="5"
+                        class="custom-indicator"
+                        aria-label="Slide 6"
+                        data-slide-index="5"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#brandingCarouselUnique"
+                        data-bs-slide-to="4"
+                        class="custom-indicator"
+                        aria-label="Slide 5"
+                        data-slide-index="4"
+                      ></button>
+                    </div>
+                    <!-- Carousel controls (arrows) -->
+                    <button
+                      class="btn btn-light btn-sm carousel-control-prev d-inline-block fs-3 me-1 position-relative rounded-0"
+                      type="button"
+                      id="prevButton"
+                      style="width: auto; height: auto"
+                    >
+                      <i class="fas fa-chevron-left"></i>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                      class="btn btn-light btn-sm carousel-control-next d-inline-block fs-3 position-relative rounded-0"
+                      type="button"
+                      id="nextButton"
+                      style="width: auto; height: auto"
+                    >
+                      <i class="fas fa-chevron-right"></i>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container mt-5 position-relative z-1">
+          <div class="row">
+            <div
+              class="align-items-center column-gap-4 d-flex flex-column mt-5"
+            >
+              <span class="fs-5 text-white"
+                >Power Your Website with Smart Hosting.</span
+              >
+              <a
+                class="align-self-center align-self-start btn fs-18 fs-6 fw-bold grad-btn px-5 py-3 text-dark text-uppercase"
+                href="#"
+                role="button"
+                >Book Your Free Consultation</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="border-1 border-top border-warning branding-section gd overflow-hidden py-5"
+        style="background-color: #012a6a"
+      >
+        <div class="container py-md-4">
+          <div class="row mb-5">
+            <div class="col-12 col-lg-12">
+              <h2 class="display-5 fw-bolder lh-1 text-uppercase text-warning">
+                INDUSTRIES WE WORK WITH
+              </h2>
+              <p class="fs-18 mb-4 text-white">
+                At Elevate X, we bring tailored digital solutions to a wide
+                range of industries, customizing strategies to fit every
+                market&rsquo;s unique needs.
+              </p>
+            </div>
+          </div>
+          <div class="row g-4">
+            <!-- Row 1 -->
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/estimate_2421990.png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white"
+                  >Architecture &amp; Interior Design Firms</span
+                >
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/image%20(32).png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white">Auto Repair &amp; Dealerships</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/image%20(33).png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white">Brick-and-Mortar Retail</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/image%20(34).png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white"
+                  >Coaching &amp; Consulting Businesses</span
+                >
+              </div>
+            </div>
+            <!-- Row 2 -->
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/image%20(35).png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white">Construction &amp; Contractors</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/image%20(36).png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white">Dental Clinics</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/image%20(37).png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white">Digital Marketing Agencies</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/image%20(38).png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white">E-commerce Brands</span>
+              </div>
+            </div>
+            <!-- Row 3 -->
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/image%20(39).png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white"
+                  >Education &amp; eLearning Platforms</span
+                >
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/image%20(51).png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white">Event Planners &amp; Venues</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/image%20(52).png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white">Fashion &amp; Beauty Brands</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/investment_2973564.png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white"
+                  >Financial Advisors &amp; Accounting Firms</span
+                >
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/dumbbell_1719695.png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white">Fitness &amp; Wellness Studios</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/acquisition_18252229.png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white">Franchise Businesses</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/government_6715888.png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white"
+                  >Government &amp; Public Services</span
+                >
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/mutual-aid_17787554.png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white">Health &amp; Life Coaches</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/tool_13787218.png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                />
+                <span class="text-white">Plumbing</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/electrical_14106329.png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white">Electricians</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/radiator-fan_17096706.png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white">Heating &amp; Ventilation</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/air-conditioning_3653288.png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white">Air Conditioning</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/hire_7884915.png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white">HR &amp; Staffing Firms</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/social-media_1935125.png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white"
+                  >Influencers &amp; Content Creators</span
+                >
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/insurance_7392559.png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white">Insurance Agencies</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/laptop_1072529.png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white">Legal Tech Platforms</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/information_2519147.png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white">Local Service Businesses</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/courthouse_11248201.png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white">Law Firm</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/control-lever_2942625.png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white"
+                  >Manufacturing &amp; Product Suppliers</span
+                >
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/camera_2110169%20(1).png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white"
+                  >Media &amp; Entertainment Companies</span
+                >
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/education_13946805.png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white">Medical Practices</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/head_5165367.png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white">Mental Health Professionals</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/give_15842954.png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white">Nonprofits &amp; Foundations</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/online-class_6209272.png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white">Online Course Creators</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/ecommerce_6220886.png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white">Online Marketplaces</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/bite_6401296.png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white"
+                  >Pet Services (Vets, Groomers, Trainers)</span
+                >
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/ownership_13338794.png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white">Real Estate</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/b2b_15376363.png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white"
+                  >Real Estate Investment Firms (REITs &amp; Property
+                  Managers)</span
+                >
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/restaurant_3660166.png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white">Restaurants &amp; Cafés</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/signboard_8953977.png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white"
+                  >Resorts, Spas &amp; Hospitality</span
+                >
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/start-up_7788517.png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white">SaaS Startups</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/trade_6995961.png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white">Subscription Box Services</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/24-hours-service_11417024.png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white">Tech Companies</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/cloud-computing_3749023.png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white">Telecommunications Providers</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-6 col-lg-3 mb-4">
+              <div
+                class="align-items-center d-flex flex-column flex-md-row text-center text-md-start"
+              >
+                <img
+                  src="assets/images/travel_2746428.png"
+                  class="me-2"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    filter: invert(76%) sepia(92%) saturate(544%)
+                      hue-rotate(359deg) brightness(102%) contrast(101%);
+                  "
+                  loading="lazy"
+                /><span class="text-white">Travel &amp; Tourism Agencies</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-3 py-md-5">
+        <div class="container py-3 py-md-5">
+          <div class="row">
+            <div class="col-md-5">
+              <h2
+                class="animate-on-scroll display-5 fw-bolder lh-sm text-primary"
+              >
+                <div class="slide-in-box">
+                  <span>Performance</span>
+                </div>
+                <div class="slide-in-box">
+                  <span>Hosting Built for</span>
+                </div>
+                <div class="slide-in-box">
+                  <span>Speed and Scale</span>
+                </div>
+              </h2>
+              <p class="fs-18">
+                Our hosting solutions deliver lightning-fast speeds,
+                enterprise-grade reliability, and effortless scalability to fuel
+                your growth.
+              </p>
+              <div
+                class="align-items-start column-gap-4 d-flex flex-column mt-5"
+              >
+                <span class="fs-5">Get Web Hosting You Can Count On</span>
+                <a
+                  class="align-self-start btn fs-18 fs-6 fw-bold grad-btn py-3 text-dark text-uppercase"
+                  href="#"
+                  role="button"
+                  >REQUEST A PERFORMANCE AUDIT</a
+                >
+              </div>
+            </div>
+            <div class="col-md-7 mt-3 mt-md-0">
+              <div class="row">
+                <div class="col-md-11">
+                  <h4 class="fs-4 fw-semibold mb-0" style="letter-spacing: 1px">
+                    Optimized Architecture
+                  </h4>
+                  <p class="fs-18">
+                    From server stack to CDN, we design for speed, uptime, and
+                    scale.
+                  </p>
+                  <hr />
+                </div>
+                <div class="col-md-10">
+                  <h4 class="fs-4 fw-semibold mb-0" style="letter-spacing: 1px">
+                    Mobile-Ready Performance
+                  </h4>
+                  <p class="fs-18">
+                    Ensure mobile visitors get the same fast, flawless
+                    experience&mdash;every time.
+                  </p>
+                  <hr />
+                </div>
+                <div class="col-md-10">
+                  <h4 class="fs-4 fw-semibold mb-0" style="letter-spacing: 1px">
+                    Downtime Recovery Protocols
+                  </h4>
+                  <p class="fs-18">
+                    We resolve issues fast and prevent future outages before
+                    they impact your business.
+                  </p>
+                  <hr />
+                </div>
+                <div class="col-md-10">
+                  <h4 class="fs-4 fw-semibold mb-0" style="letter-spacing: 1px">
+                    Automated System Alerts
+                  </h4>
+                  <p class="fs-18">
+                    Be the first to know&mdash;our alert system tracks load
+                    issues, plugin errors, and outages in real time.
+                  </p>
+                  <hr />
+                </div>
+                <div class="col-md-10">
+                  <h4 class="fs-4 fw-semibold mb-0" style="letter-spacing: 1px">
+                    Proactive Maintenance
+                  </h4>
+                  <p class="fs-18">
+                    We don&rsquo;t wait for things to break&mdash;we prevent
+                    them.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="services-section bg-black text-white py-5">
+        <div class="container pt-md-5 py-0">
+          <!-- Section Title and Description -->
+          <div class="row mb-5">
+            <div class="col-12 col-md-7 col-xxl-7 mx-auto text-center">
+              <h2 class="display-5 fw-bolder lh-1 text-warning">
+                What We Offer
+              </h2>
+              <p class="fs-18 text-white">
+                Comprehensive Web Hosting &amp; Support Services Built for
+                Business Uptime and Security
+              </p>
+            </div>
+          </div>
+          <div class="row g-0">
+            <!-- First Row -->
+            <!-- Lead Qualification Bots Column -->
+            <div
+              class="border-bottom border-dark-subtle border-end col-md-4 mb-4 mb-md-0 mo-bor-right-none px-2 px-lg-4 py-md-5 text-center"
+            >
+              <img
+                src="assets/images/image%20(7).png"
+                class="img-fluid mb-2 mb-4"
+                style="
+                  width: 80px;
+                  height: 80px;
+                  filter: invert(1) sepia(1) saturate(5) hue-rotate(35deg)
+                    brightness(1.1);
+                "
+                loading="lazy"
+              />
+              <h3 class="fs-4 mb-4 service-title">
+                Hosting &amp; Infrastructure
+              </h3>
+              <ul class="list-unstyled text-start">
+                <li class="mb-3 d-flex align-items-start">
+                  <span class="text-warning me-2">&#10003;</span>
+                  <p class="mb-0">
+                    <span class="fw-bold"> Managed Cloud Hosting:</span> We
+                    provide flexible, high-speed cloud environments for
+                    reliability, scalability, and performance.
+                  </p>
+                </li>
+                <li class="mb-3 d-flex align-items-start">
+                  <span class="text-warning me-2">&#10003;</span>
+                  <p class="mb-0">
+                    <span class="fw-bold"
+                      >Scalable VPS &amp; Dedicated Solutions:&nbsp;</span
+                    >Easily upgrade server resources as your traffic grows,
+                    without any downtime interruptions.
+                  </p>
+                </li>
+                <li class="mb-3 d-flex align-items-start">
+                  <span class="text-warning me-2">&#10003;</span>
+                  <p class="mb-0">
+                    <span class="fw-bold">Secure CDN &amp; DNS Setup:</span>
+                    Distribute content globally while securing DNS
+                    infrastructure for maximum speed and protection.
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <!-- E-commerce Chatbots Column -->
+            <div
+              class="border-bottom border-dark-subtle border-end col-md-4 mb-4 mb-md-0 mo-bor-right-none px-2 px-lg-4 py-md-5 text-center"
+            >
+              <img
+                src="assets/images/image%20(8).png"
+                class="img-fluid mb-2 mb-4"
+                style="
+                  width: 80px;
+                  height: 80px;
+                  filter: invert(1) sepia(1) saturate(5) hue-rotate(35deg)
+                    brightness(1.1);
+                "
+                loading="lazy"
+              />
+              <h3 class="fs-4 mb-4 service-title">
+                Website Monitoring &amp; Alerts
+              </h3>
+              <ul class="list-unstyled text-start">
+                <li class="mb-3 d-flex align-items-start">
+                  <span class="text-warning me-2">&#10003;</span>
+                  <p class="mb-0">
+                    <span class="fw-bold">
+                      Uptime &amp; Downtime Tracking:&nbsp;</span
+                    >
+                    Monitor website status continuously to detect downtime
+                    instantly and prevent potential revenue loss.
+                  </p>
+                </li>
+                <li class="mb-3 d-flex align-items-start">
+                  <span class="text-warning me-2">&#10003;</span>
+                  <p class="mb-0">
+                    <span class="fw-bold"> Error Log Reports:</span> Identify,
+                    log, and report website errors quickly to maintain high
+                    performance standards.
+                  </p>
+                </li>
+                <li class="mb-3 d-flex align-items-start">
+                  <span class="text-warning me-2">&#10003;</span>
+                  <p class="mb-0">
+                    <span class="fw-bold">Real-Time Notifications:&nbsp;</span
+                    >Receive instant alerts about performance issues, traffic
+                    anomalies, or website security breaches.
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <!-- Customer Service Bots Column -->
+            <div
+              class="border-bottom border-dark-subtle col-md-4 mb-4 mb-md-0 px-2 px-lg-4 py-md-5 text-center"
+            >
+              <img
+                src="assets/images/image%20(9).png"
+                class="img-fluid mb-2 mb-4"
+                style="
+                  width: 80px;
+                  height: 80px;
+                  filter: invert(1) sepia(1) saturate(5) hue-rotate(35deg)
+                    brightness(1.1);
+                "
+                loading="lazy"
+              />
+              <h3 class="fs-4 mb-4 service-title">
+                Maintenance &amp; Optimization
+              </h3>
+              <ul class="list-unstyled text-start">
+                <li class="mb-3 d-flex align-items-start">
+                  <span class="text-warning me-2">&#10003;</span>
+                  <p class="mb-0">
+                    <span class="fw-bold"> Plugin &amp; CMS Updates:&nbsp;</span
+                    >Keep plugins and CMS updated to enhance functionality,
+                    security, and performance reliably.
+                  </p>
+                </li>
+                <li class="mb-3 d-flex align-items-start">
+                  <span class="text-warning me-2">&#10003;</span>
+                  <p class="mb-0">
+                    <span class="fw-bold"
+                      >Cache &amp; Speed Optimization:&nbsp;</span
+                    >Accelerate site speed with advanced caching techniques and
+                    backend performance enhancements.
+                  </p>
+                </li>
+                <li class="mb-3 d-flex align-items-start">
+                  <span class="text-warning me-2">&#10003;</span>
+                  <p class="mb-0">
+                    <span class="fw-bold"
+                      >Image Compression &amp; Lazy Loading:&nbsp;</span
+                    >Optimize images for faster loading, improving user
+                    experience and boosting SEO rankings.
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <!-- Second Row -->
+            <!-- Appointment Booking Bots Column -->
+            <div
+              class="border-bottom border-dark-subtle border-end col-md-4 mb-4 mb-md-0 mo-bor-right-none px-2 px-lg-4 py-md-5 text-center"
+            >
+              <img
+                src="assets/images/image%20(10).png"
+                class="img-fluid mb-2 mb-4"
+                style="
+                  width: 80px;
+                  height: 80px;
+                  filter: invert(1) sepia(1) saturate(5) hue-rotate(35deg)
+                    brightness(1.1);
+                "
+                loading="lazy"
+              />
+              <h3 class="fs-4 mb-4 service-title">
+                Data Protection &amp; Backups
+              </h3>
+              <ul class="list-unstyled text-start">
+                <li class="mb-3 d-flex align-items-start">
+                  <span class="text-warning me-2">&#10003;</span>
+                  <p class="mb-0">
+                    <span class="fw-bold">Daily Automated Backups:&nbsp;</span>
+                    Protect your website daily with reliable, automated backup
+                    systems for recovery.
+                  </p>
+                </li>
+                <li class="mb-3 d-flex align-items-start">
+                  <span class="text-warning me-2">&#10003;</span>
+                  <p class="mb-0">
+                    <span class="fw-bold">
+                      Version History &amp; Rollbacks:&nbsp;</span
+                    >
+                    Access previous versions easily and roll back updates safely
+                    if needed.
+                  </p>
+                </li>
+                <li class="mb-3 d-flex align-items-start">
+                  <span class="text-warning me-2">&#10003;</span>
+                  <p class="mb-0">
+                    <span class="fw-bold">Secure File Storage:&nbsp;</span>Store
+                    critical website files securely, protecting against data
+                    loss and cyber threats.
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <!-- Sales Chatbots Column -->
+            <div
+              class="border-bottom border-dark-subtle border-end col-md-4 mb-4 mb-md-0 mo-bor-right-none px-2 px-lg-4 py-md-5 text-center"
+            >
+              <img
+                src="assets/images/image%20(12).png"
+                class="img-fluid mb-2 mb-4"
+                style="
+                  width: 80px;
+                  height: 80px;
+                  filter: invert(1) sepia(1) saturate(5) hue-rotate(35deg)
+                    brightness(1.1);
+                "
+                loading="lazy"
+              />
+              <h3 class="fs-4 mb-4 service-title">Security &amp; Compliance</h3>
+              <ul class="list-unstyled text-start">
+                <li class="mb-3 d-flex align-items-start">
+                  <span class="text-warning me-2">&#10003;</span>
+                  <p class="mb-0">
+                    <span class="fw-bold">
+                      Malware Scanning &amp; Removal:&nbsp;</span
+                    >Detect, neutralize, and remove malware threats before they
+                    impact your website&rsquo;s operations.
+                  </p>
+                </li>
+                <li class="mb-3 d-flex align-items-start">
+                  <span class="text-warning me-2">&#10003;</span>
+                  <p class="mb-0">
+                    <span class="fw-bold">SSL Certificate Management: </span>
+                    Ensure secure, encrypted connections with managed SSL
+                    certificates and timely renewals.
+                  </p>
+                </li>
+                <li class="mb-3 d-flex align-items-start">
+                  <span class="text-warning me-2">✓</span>
+                  <p class="mb-0">
+                    <span class="fw-bold">
+                      GDPR &amp; PCI Compliance Support:&nbsp;</span
+                    >Maintain data protection compliance with GDPR regulations
+                    and PCI security standards support.
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <!-- Custom Chatbot Development Column -->
+            <div
+              class="border-bottom border-dark-subtle col-md-4 mb-4 mb-md-0 px-2 px-lg-4 py-md-5 text-center"
+            >
+              <img
+                src="assets/images/image%20(13).png"
+                class="img-fluid mb-2 mb-4"
+                style="
+                  width: 80px;
+                  height: 80px;
+                  filter: invert(1) sepia(1) saturate(5) hue-rotate(35deg)
+                    brightness(1.1);
+                "
+                loading="lazy"
+              />
+              <h3 class="fs-4 mb-4 service-title">
+                Technical Support &amp; Recovery
+              </h3>
+              <ul class="list-unstyled text-start">
+                <li class="mb-3 d-flex align-items-start">
+                  <span class="text-warning me-2">&#10003;</span>
+                  <p class="mb-0">
+                    <span class="fw-bold"
+                      >24/7 Support &amp; Ticketing:&nbsp;</span
+                    >Access expert support anytime with responsive ticketing
+                    systems and fast resolutions.
+                  </p>
+                </li>
+                <li class="mb-3 d-flex align-items-start">
+                  <span class="text-warning me-2">✓</span>
+                  <p class="mb-0">
+                    <span class="fw-bold"> Emergency Fixes:</span> Resolve
+                    urgent technical issues quickly with prioritized emergency
+                    website repair services.
+                  </p>
+                </li>
+                <li class="mb-3 d-flex align-items-start">
+                  <span class="text-warning me-2">&#10003;</span>
+                  <p class="mb-0">
+                    <span class="fw-bold"
+                      >Website Recovery &amp; Restoration:&nbsp;</span
+                    >Restore websites rapidly after disruptions, ensuring
+                    minimal downtime and operational impact.
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="border-dark-subtle border-end col-md-4 mb-4 mb-md-0 mo-bor-right-none px-2 px-lg-4 py-md-5 text-center"
+            >
+              <img
+                src="assets/images/image%20(14).png"
+                class="img-fluid mb-2 mb-4"
+                style="
+                  width: 80px;
+                  height: 80px;
+                  filter: invert(1) sepia(1) saturate(5) hue-rotate(35deg)
+                    brightness(1.1);
+                "
+                loading="lazy"
+              />
+              <h3 class="fs-4 mb-4 service-title">
+                Domain &amp; Email Hosting
+              </h3>
+              <ul class="list-unstyled text-start">
+                <li class="mb-3 d-flex align-items-start">
+                  <span class="text-warning me-2">&#10003;</span>
+                  <p class="mb-0">
+                    <span class="fw-bold">Domain Setup &amp; Management:</span>
+                    Manage domains professionally with seamless setup, renewals,
+                    redirects, and DNS management.
+                  </p>
+                </li>
+                <li class="mb-3 d-flex align-items-start">
+                  <span class="text-warning me-2">✓</span>
+                  <p class="mb-0">
+                    <span class="fw-bold">Branded Email Accounts:</span> Create
+                    professional email addresses that align perfectly with your
+                    brand identity.
+                  </p>
+                </li>
+                <li class="mb-3 d-flex align-items-start">
+                  <span class="text-warning me-2">&#10003;</span>
+                  <p class="mb-0">
+                    <span class="fw-bold">SPF/DKIM/DMARC Setup:&nbsp;</span
+                    >Authenticate and protect your email communications against
+                    phishing and spoofing attacks.
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="border-dark-subtle border-end col-md-4 mb-4 mb-md-0 mo-bor-right-none px-2 px-lg-4 py-md-5 text-center"
+            >
+              <img
+                src="assets/images/image%20(15).png"
+                class="img-fluid mb-2 mb-4"
+                style="
+                  width: 80px;
+                  height: 80px;
+                  filter: invert(1) sepia(1) saturate(5) hue-rotate(35deg)
+                    brightness(1.1);
+                "
+                loading="lazy"
+              />
+              <h3 class="fs-4 mb-4 service-title">
+                Performance Analytics &amp; Reporting
+              </h3>
+              <ul class="list-unstyled text-start">
+                <li class="mb-3 d-flex align-items-start">
+                  <span class="text-warning me-2">&#10003;</span>
+                  <p class="mb-0">
+                    <span class="fw-bold"
+                      >Real-Time Traffic Monitoring:&nbsp;</span
+                    >Monitor visitor traffic live to identify patterns,
+                    behaviors, and engagement opportunities instantly.
+                  </p>
+                </li>
+                <li class="mb-3 d-flex align-items-start">
+                  <span class="text-warning me-2">✓</span>
+                  <p class="mb-0">
+                    <span class="fw-bold">
+                      Load Speed and Resource Usage Reports:</span
+                    >
+                    Analyze loading times and server resource consumption for
+                    continuous performance optimization improvements.
+                  </p>
+                </li>
+                <li class="mb-3 d-flex align-items-start">
+                  <span class="text-warning me-2">&#10003;</span>
+                  <p class="mb-0">
+                    <span class="fw-bold">
+                      Actionable Website Insights:&nbsp;</span
+                    >
+                    Identify conversion gaps, improve user journeys, and drive
+                    smarter growth strategies consistently.
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-4 px-2 px-lg-4 py-0 py-md-5 text-center">
+              <img
+                src="assets/images/image%20(16).png"
+                class="img-fluid mb-2 mb-4"
+                style="
+                  width: 80px;
+                  height: 80px;
+                  filter: invert(1) sepia(1) saturate(5) hue-rotate(35deg)
+                    brightness(1.1);
+                "
+                loading="lazy"
+              />
+              <h3 class="fs-4 mb-4 service-title">
+                Seamless Migration &amp; Onboarding
+              </h3>
+              <ul class="list-unstyled text-start">
+                <li class="mb-3 d-flex align-items-start">
+                  <span class="text-warning me-2">&#10003;</span>
+                  <p class="mb-0">
+                    <span class="fw-bold"
+                      >Zero Downtime Site Transfers:&nbsp;</span
+                    >Migrate your website securely with guaranteed zero downtime
+                    during the transition process.
+                  </p>
+                </li>
+                <li class="mb-3 d-flex align-items-start">
+                  <span class="text-warning me-2">✓</span>
+                  <p class="mb-0">
+                    <span class="fw-bold">
+                      Full Compatibility Testing Post-Migration:&nbsp;</span
+                    >Verify full platform functionality after migration to
+                    ensure seamless performance and experience.
+                  </p>
+                </li>
+                <li class="mb-3 d-flex align-items-start">
+                  <span class="text-warning me-2">&#10003;</span>
+                  <p class="mb-0">
+                    <span class="fw-bold">
+                      Personalized Onboarding Support: </span
+                    >Receive tailored onboarding guidance to maximize your
+                    website&rsquo;s capabilities post-migration.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="approach-section py-5 position-relative">
+        <!-- Background image -->
+        <div
+          style="
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url('assets/images/branding-bg.jpg');
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+          "
+        ></div>
+        <!-- Gradient overlay -->
+        <div
+          style="
+            background: linear-gradient(to right, #007547, #004a1f);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.85;
+            z-index: 1;
+          "
+        ></div>
+        <!-- Content container with higher z-index -->
+        <div
+          class="container-fluid position-relative py-md-5"
+          style="z-index: 2; max-width: 97%"
+        >
+          <div class="row">
+            <div class="col-12">
+              <h2 class="display-5 fw-bolder lh-1 text-warning">
+                Our Approach to Web Support &amp; Hosting
+              </h2>
+              <p class="fs-18 mb-4 text-white">
+                We design web hosting and support around your specific business
+                needs &mdash; prioritizing speed, security, reliability, and
+                seamless growth.
+              </p>
+            </div>
+          </div>
+          <div class="accordion" id="serviceAccordion">
+            <div class="row g-4">
+              <!-- Discovery & Strategy Card -->
+              <div class="col-md-6 col-lg-3">
+                <div
+                  class="border-0 card overflow-hidden position-relative rounded-3"
+                  style="height: 400px"
+                >
+                  <img
+                    src="assets/images/imageinfra).png"
+                    class="position-absolute w-100 h-100 object-fit-cover"
+                    loading="lazy"
+                  />
+                  <div
+                    class="card-img-top d-block"
+                    style="height: 400px; visibility: hidden"
+                  ></div>
+                  <div
+                    class="card-body py-4 position-relative d-flex flex-column"
+                    style="
+                      background-color: #053d20d6;
+                      transition: background-color 0.3s;
+                    "
+                  >
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h5 class="card-title text-warning fw-bold mb-0">
+                        Infrastructure Built Around Your Needs
+                      </h5>
+                      <button
+                        class="btn btn-warning rounded-circle d-flex justify-content-center align-items-center"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#discovery-description"
+                        aria-expanded="false"
+                        aria-controls="discovery-description"
+                        style="width: 40px; height: 40px"
+                        onclick="toggleCardBodyBg(this)"
+                      >
+                        <span style="font-size: 1.5rem; font-weight: bold"
+                          >+</span
+                        >
+                      </button>
+                    </div>
+                    <div
+                      id="discovery-description"
+                      class="collapse mt-3 overflow-auto"
+                      style="max-height: 250px"
+                    >
+                      <p class="text-white mb-0">
+                        We customize hosting environments that align perfectly
+                        with your business growth goals, technology stack,
+                        budget, scalability, and operational needs.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Design & Development Card -->
+              <div class="col-md-6 col-lg-3">
+                <div
+                  class="card overflow-hidden border-0 position-relative"
+                  style="height: 400px"
+                >
+                  <img
+                    src="assets/images/spreadsheet-document-information-financial-startup-concept-snugly_31965-519904.avif"
+                    class="position-absolute w-100 h-100 object-fit-cover"
+                    loading="lazy"
+                  />
+                  <div
+                    class="card-img-top d-block"
+                    style="height: 400px; visibility: hidden"
+                  ></div>
+                  <div
+                    class="card-body py-4 position-relative d-flex flex-column"
+                    style="
+                      background-color: #053d20d6;
+                      transition: background-color 0.3s;
+                    "
+                  >
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h5 class="card-title text-warning fw-bold mb-0">
+                        <span class="d-md-block">Proactive Communication</span>
+                      </h5>
+                      <button
+                        class="btn btn-warning rounded-circle d-flex justify-content-center align-items-center"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#design-description"
+                        aria-expanded="false"
+                        aria-controls="design-description"
+                        style="width: 40px; height: 40px"
+                        onclick="toggleCardBodyBg(this)"
+                      >
+                        <span style="font-size: 1.5rem; font-weight: bold"
+                          >+</span
+                        >
+                      </button>
+                    </div>
+                    <div
+                      id="design-description"
+                      class="collapse mt-3 overflow-auto"
+                      style="max-height: 250px"
+                    >
+                      <p class="text-white mb-0">
+                        You stay informed with consistent updates, detailed
+                        reports, issue alerts, scheduled maintenance notices,
+                        and expert recommendations&mdash;never left wondering.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Implementation Card -->
+              <div class="col-md-6 col-lg-3">
+                <div
+                  class="card overflow-hidden border-0 position-relative"
+                  style="height: 400px"
+                >
+                  <img
+                    src="assets/images/woman-data-center-making-sure-rigs-are-functioning-optimally_482257-89723.avif"
+                    class="position-absolute w-100 h-100 object-fit-cover"
+                    loading="lazy"
+                  />
+                  <div
+                    class="card-img-top d-block"
+                    style="height: 400px; visibility: hidden"
+                  ></div>
+                  <div
+                    class="card-body py-4 position-relative d-flex flex-column"
+                    style="
+                      background-color: #053d20d6;
+                      transition: background-color 0.3s;
+                    "
+                  >
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h5 class="card-title text-warning fw-bold mb-0">
+                        Speed + Security First
+                      </h5>
+                      <button
+                        class="btn btn-warning rounded-circle d-flex justify-content-center align-items-center"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#implementation-description"
+                        aria-expanded="false"
+                        aria-controls="implementation-description"
+                        style="width: 40px; height: 40px"
+                        onclick="toggleCardBodyBg(this)"
+                      >
+                        <span style="font-size: 1.5rem; font-weight: bold"
+                          >+</span
+                        >
+                      </button>
+                    </div>
+                    <div
+                      id="implementation-description"
+                      class="collapse mt-3 overflow-auto"
+                      style="max-height: 250px"
+                    >
+                      <p class="text-white mb-0">
+                        We prioritize caching, encryption, firewall setup, and
+                        server performance enhancements to ensure fast-loading,
+                        secure, and reliable digital experiences everywhere.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Success Card -->
+              <div class="col-md-6 col-lg-3">
+                <div
+                  class="card overflow-hidden border-0 position-relative"
+                  style="height: 400px"
+                >
+                  <img
+                    src="assets/images/protection-surveillance-safety-privacy-policy-concept_53876-128098.jpg"
+                    class="position-absolute w-100 h-100 object-fit-cover"
+                    loading="lazy"
+                  />
+                  <h2 class="display-4 text-success fw-bolder lh-1">
+                    Get in Touch
+                  </h2>
+                  <div
+                    class="card-img-top d-block"
+                    style="height: 400px; visibility: hidden"
+                  ></div>
+                  <div
+                    class="card-body py-4 position-relative d-flex flex-column"
+                    style="
+                      background-color: #053d20d6;
+                      transition: background-color 0.3s;
+                    "
+                  >
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h5 class="card-title text-warning fw-bold mb-0">
+                        Zero-Downtime Mentality
+                      </h5>
+                      <button
+                        class="btn btn-warning rounded-circle d-flex justify-content-center align-items-center"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#success-description"
+                        aria-expanded="false"
+                        aria-controls="success-description"
+                        style="width: 40px; height: 40px"
+                        onclick="toggleCardBodyBg(this)"
+                      >
+                        <span style="font-size: 1.5rem; font-weight: bold"
+                          >+</span
+                        >
+                      </button>
+                    </div>
+                    <div
+                      id="success-description"
+                      class="collapse mt-3 overflow-auto"
+                      style="max-height: 250px"
+                    >
+                      <p class="text-white mb-0">
+                        Every update, migration, or optimization is carefully
+                        planned, tested, and executed to maintain uptime,
+                        protect performance, and avoid disruption.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-5">
+        <div class="container-xxl py-md-5">
+          <div class="row">
+            <div class="col-12">
+              <div class="accordion" id="FAQ">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-12 mb-4 text-center">
+                      <h2 class="display-5 fw-bold text-primary">
+                        Frequently Asked Hosting &amp; Support Questions
+                      </h2>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <!-- Left Column -->
+                    <div class="col-lg-6 pe-0 ps-0 px-md-4">
+                      <!-- FAQ Item 1 -->
+                      <div class="accordion-item border-0 mb-3">
+                        <h3 class="accordion-header" id="headingOne">
+                          <button
+                            class="accordion-button fs-18 fw-bold"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne"
+                            aria-expanded="true"
+                            aria-controls="collapseOne"
+                          >
+                            <span class="icon-wrapper"
+                              ><i class="fa fa-chevron-down plus-icon"></i
+                              ><i class="fa fa-chevron-up minus-icon"></i></span
+                            ><span class="ms-5"
+                              >How fast is your hosting compared to
+                              others?</span
+                            >
+                          </button>
+                        </h3>
+                        <div
+                          id="collapseOne"
+                          class="accordion-collapse collapse show"
+                          aria-labelledby="headingOne"
+                          data-bs-parent="#FAQ"
+                        >
+                          <div class="accordion-body">
+                            <p class="fs-18">
+                              Our cloud hosting stack is optimized for speed
+                              with SSDs, caching, and server-side performance
+                              tweaks.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <hr class="my-0" />
+                      <!-- FAQ Item 2 -->
+                      <div class="accordion-item border-0 mb-3">
+                        <h3 class="accordion-header" id="headingTwo">
+                          <button
+                            class="accordion-button fs-18 fw-bold collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo"
+                            aria-expanded="false"
+                            aria-controls="collapseTwo"
+                          >
+                            <span class="icon-wrapper me-3" style="top: 44%"
+                              ><i class="fa fa-chevron-down plus-icon"></i
+                              ><i class="fa fa-chevron-up minus-icon"></i></span
+                            ><span class="ms-5"
+                              >Do you support WordPress or custom
+                              websites?</span
+                            >
+                          </button>
+                        </h3>
+                        <div
+                          id="collapseTwo"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="headingTwo"
+                          data-bs-parent="#FAQ"
+                        >
+                          <div class="accordion-body">
+                            <p class="fs-18">
+                              Yes. We support all major platforms including
+                              WordPress, Webflow, custom HTML/PHP, Shopify, and
+                              more.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <hr class="my-0" />
+                      <!-- FAQ Item 3 -->
+                      <div class="accordion-item border-0 mb-3">
+                        <h3 class="accordion-header" id="headingThree">
+                          <button
+                            class="accordion-button fs-18 fw-bold collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree"
+                            aria-expanded="false"
+                            aria-controls="collapseThree"
+                          >
+                            <span class="icon-wrapper me-3"
+                              ><i class="fa fa-chevron-down plus-icon"></i
+                              ><i class="fa fa-chevron-up minus-icon"></i></span
+                            ><span class="ms-5"
+                              >Can you migrate my current site?</span
+                            >
+                          </button>
+                        </h3>
+                        <div
+                          id="collapseThree"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="headingThree"
+                          data-bs-parent="#FAQ"
+                        >
+                          <div class="accordion-body">
+                            <p class="fs-18">
+                              Absolutely. We&rsquo;ll handle the migration with
+                              no downtime and complete configuration included.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <hr class="my-0" />
+                      <!-- FAQ Item 4 -->
+                      <div class="accordion-item border-0 mb-3">
+                        <h3 class="accordion-header" id="headingFour">
+                          <button
+                            class="accordion-button fs-18 fw-bold collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour"
+                            aria-expanded="false"
+                            aria-controls="collapseFour"
+                          >
+                            <span class="icon-wrapper me-3"
+                              ><i class="fa fa-chevron-down plus-icon"></i
+                              ><i class="fa fa-chevron-up minus-icon"></i></span
+                            ><span class="ms-5"
+                              >Do you provide email hosting?</span
+                            >
+                          </button>
+                        </h3>
+                        <div
+                          id="collapseFour"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="headingFour"
+                          data-bs-parent="#FAQ"
+                        >
+                          <div class="accordion-body">
+                            <p class="fs-18">
+                              Yes. We offer secure branded email and domain
+                              management&mdash;plus SPF, DKIM, and DMARC setup
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <hr class="my-0" />
+                      <!-- FAQ Item 5 -->
+                      <div class="accordion-item border-0 mb-3">
+                        <h3 class="accordion-header" id="headingFive">
+                          <button
+                            class="accordion-button fs-18 fw-bold collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseFive"
+                            aria-expanded="false"
+                            aria-controls="collapseFive"
+                          >
+                            <span class="icon-wrapper me-3"
+                              ><i class="fa fa-chevron-down plus-icon"></i
+                              ><i class="fa fa-chevron-up minus-icon"></i></span
+                            ><span class="ms-5"
+                              >What happens if my site goes down?</span
+                            >
+                          </button>
+                        </h3>
+                        <div
+                          id="collapseFive"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="headingFive"
+                          data-bs-parent="#FAQ"
+                        >
+                          <div class="accordion-body">
+                            <p class="fs-18">
+                              We&rsquo;re alerted instantly, take immediate
+                              action, and provide detailed reports after
+                              resolution.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Right Column -->
+                    <div class="col-lg-6 pe-0 ps-0 px-md-4">
+                      <!-- FAQ Item 6 -->
+                      <div class="accordion-item border-0 mb-3">
+                        <h3 class="accordion-header" id="headingSix">
+                          <button
+                            class="accordion-button fs-18 fw-bold collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseSix"
+                            aria-expanded="false"
+                            aria-controls="collapseSix"
+                          >
+                            <span class="icon-wrapper me-3"
+                              ><i class="fa fa-chevron-down plus-icon"></i
+                              ><i class="fa fa-chevron-up minus-icon"></i></span
+                            ><span class="ms-5"
+                              >How often do you back up my website?</span
+                            >
+                          </button>
+                        </h3>
+                        <div
+                          id="collapseSix"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="headingSix"
+                          data-bs-parent="#FAQ"
+                        >
+                          <div class="accordion-body">
+                            <p class="fs-18">
+                              Daily. And we can restore any previous version if
+                              needed&mdash;within minutes.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <hr class="my-0" />
+                      <!-- FAQ Item 7 -->
+                      <div class="accordion-item border-0 mb-3">
+                        <h3 class="accordion-header" id="headingSeven">
+                          <button
+                            class="accordion-button fs-18 fw-bold collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseSeven"
+                            aria-expanded="false"
+                            aria-controls="collapseSeven"
+                          >
+                            <span class="icon-wrapper me-3"
+                              ><i class="fa fa-chevron-down plus-icon"></i
+                              ><i class="fa fa-chevron-up minus-icon"></i></span
+                            ><span class="ms-5"
+                              >Can I scale my plan as my business grows?</span
+                            >
+                          </button>
+                        </h3>
+                        <div
+                          id="collapseSeven"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="headingSeven"
+                          data-bs-parent="#FAQ"
+                        >
+                          <div class="accordion-body">
+                            <p class="fs-18">
+                              Definitely. Our hosting plans grow with your
+                              traffic and feature needs.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <hr class="my-0" />
+                      <!-- FAQ Item 8 -->
+                      <div class="accordion-item border-0 mb-3">
+                        <h3 class="accordion-header" id="headingEight">
+                          <button
+                            class="accordion-button fs-18 fw-bold collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseEight"
+                            aria-expanded="false"
+                            aria-controls="collapseEight"
+                          >
+                            <span class="icon-wrapper me-3" style="top: 44%"
+                              ><i class="fa fa-chevron-down plus-icon"></i
+                              ><i class="fa fa-chevron-up minus-icon"></i></span
+                            ><span class="ms-5"
+                              >Do I get a dedicated support contact?</span
+                            >
+                          </button>
+                        </h3>
+                        <div
+                          id="collapseEight"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="headingEight"
+                          data-bs-parent="#FAQ"
+                        >
+                          <div class="accordion-body">
+                            <p class="fs-18">
+                              Yes. You&rsquo;ll have a named specialist and
+                              access to 24/7 support for urgent needs.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <hr class="my-0" />
+                      <!-- FAQ Item 9 -->
+                      <div class="accordion-item border-0 mb-3">
+                        <h3 class="accordion-header" id="headingNine">
+                          <button
+                            class="accordion-button fs-18 fw-bold collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseNine"
+                            aria-expanded="false"
+                            aria-controls="collapseNine"
+                          >
+                            <span class="icon-wrapper me-3"
+                              ><i class="fa fa-chevron-down plus-icon"></i
+                              ><i class="fa fa-chevron-up minus-icon"></i></span
+                            ><span class="ms-5"
+                              >Is Your Website Fully Supported and
+                              Protected?</span
+                            >
+                          </button>
+                        </h3>
+                        <div
+                          id="collapseNine"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="headingNine"
+                          data-bs-parent="#FAQ"
+                        >
+                          <div class="accordion-body">
+                            <p class="fs-18">
+                              Let Elevate X deliver hosting and support
+                              that&rsquo;s fast, secure, and
+                              stress-free&mdash;so you can focus on growth.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <hr class="my-0" />
+                      <!-- FAQ Item 10 -->
+                      <div class="accordion-item border-0 mb-3">
+                        <h3 class="accordion-header" id="headingTen">
+                          <button
+                            class="accordion-button fs-18 fw-bold collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseTen"
+                            aria-expanded="false"
+                            aria-controls="collapseTen"
+                          >
+                            <span class="icon-wrapper me-3"
+                              ><i class="fa fa-chevron-down plus-icon"></i
+                              ><i class="fa fa-chevron-up minus-icon"></i></span
+                            ><span class="ms-5"
+                              >Do you monitor website threats and performance
+                              issues?</span
+                            >
+                          </button>
+                        </h3>
+                        <div
+                          id="collapseTen"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="headingTen"
+                          data-bs-parent="#FAQ"
+                        >
+                          <div class="accordion-body">
+                            <p class="fs-18">
+                              Yes. We continuously monitor your website for
+                              uptime, security threats, load speed, and
+                              technical errors&mdash;catching issues before they
+                              escalate.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="brand-standout-sec py-5" style="background-color: #000">
+        <div class="container-xxl py-0 py-md-5">
+          <div class="justify-content-center py-0 py-md-5 row">
+            <div class="col-md-9">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center text-center text-white"
+                style="position: relative; z-index: 2"
+              >
+                <div class="d-flex flex-column justify-content-center">
+                  <h2 class="fw-bolder h2 lh-1">
+                    Ready to Elevate Your Website Hosting?
+                  </h2>
+                  <p class="fw-semibold h5 mt-4">
+                    Let Elevate X deliver reliable, secure web hosting and
+                    proactive support that keeps your site fast, protected, and
+                    ready to scale
+                  </p>
+                  <p class="fw-bolder h4 pb-3 pt-5">
+                    Let&rsquo;s Build a Hosting Foundation That Grows With You
+                  </p>
+                  <a
+                    class="align-self-center align-self-start btn fs-18 fs-6 fw-bold grad-btn py-3 text-dark text-uppercase"
+                    href="#"
+                    role="button"
+                    >Request Your Free Hosting Strategy Session Today</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-black border-success border-top pt-5">
+      <div class="container-fluid pb-5 px-0" style="max-width: 95%">
+        <div class="row">
+          <div
+            class="align-items-lg-start col-lg-3 col-md-6 d-flex flex-column order-first"
+          >
+            <img
+              src="assets/images/logo.png"
+              alt=""
+              class="img-fluid mb-5"
+              loading="lazy"
+            /><a href="" class="fs-6 pb-3 text-decoration-none text-white"
+              ><i
+                class="text-success fa-phone fa-solid me-1"
+                aria-hidden="true"
+              ></i>
+              +1 (347) 818-4696 | 347-818-4696</a
+            ><a href="" class="text-decoration-none text-white fs-6"
+              ><i
+                class="text-success fa-envelope fa-solid me-1"
+                aria-hidden="true"
+              ></i
+              >INFO@ELEVATEXSOLUTIONS.COM</a
+            >
+          </div>
+          <div
+            class="col-lg-7 col-md-12 mt-md-5 mt-xl-0 pe-md-auto pe-xl-auto ps-md-4 ps-xl-1 px-4"
+          >
+            <div class="row">
+              <div class="col-md-3 col-xxl-3 mt-4 mt-md-0 px-2 px-sm-0">
+                <ul class="d-flex flex-column navbar-nav fs-5 mx-auto">
+                  <li class="nav-item">
+                    <a
+                      aria-current="page"
+                      href="#"
+                      class="active fs-6 fw-normal nav-link pt-0 text-uppercase text-white"
+                      >About Us</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link text-uppercase text-white fs-6 fw-normal"
+                      href="#"
+                      >Services</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link text-uppercase text-white fs-6 fw-normal"
+                      href="#"
+                      >Career</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link text-uppercase text-white fs-6 fw-normal"
+                      href="#"
+                      >Contact</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link text-uppercase text-white fs-6 fw-normal"
+                      href="#"
+                      >Get A Quote</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-3 col-xxl-3 mt-4 mt-md-0 px-2 px-sm-0">
+                <h3 class="text-success text-uppercase fs-6">creative</h3>
+                <ul class="list-group list-unstyled">
+                  <li
+                    class="list-group-item bg-transparent border-0 text-white ps-0"
+                  >
+                    <a href="#" class="text-decoration-none text-warning"
+                      >Branding</a
+                    >
+                  </li>
+                  <li
+                    class="list-group-item bg-transparent border-0 text-white ps-0"
+                  >
+                    <a href="#" class="text-decoration-none text-warning"
+                      >Graphic Design</a
+                    >
+                  </li>
+                  <li
+                    class="list-group-item bg-transparent border-0 text-white ps-0"
+                  >
+                    <a href="#" class="text-decoration-none text-warning"
+                      >UI/UX Design</a
+                    >
+                  </li>
+                  <li
+                    class="list-group-item bg-transparent border-0 text-white ps-0"
+                  >
+                    <a href="#" class="text-decoration-none text-warning"
+                      >Content Creation</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-3 mt-4 mt-md-0 px-2 px-sm-0">
+                <h3 class="text-success text-uppercase fs-6">Web Services</h3>
+                <ul class="list-group list-unstyled">
+                  <li
+                    class="list-group-item bg-transparent border-0 text-white ps-0"
+                  >
+                    <a href="#" class="text-decoration-none text-warning"
+                      >Web Design</a
+                    >
+                  </li>
+                  <li
+                    class="list-group-item bg-transparent border-0 text-white ps-0"
+                  >
+                    <a href="#" class="text-decoration-none text-warning"
+                      >Web Development</a
+                    >
+                  </li>
+                  <li
+                    class="list-group-item bg-transparent border-0 text-white ps-0"
+                  >
+                    <a href="#" class="text-decoration-none text-warning"
+                      >Web Support & Hosting</a
+                    >
+                  </li>
+                  <li
+                    class="list-group-item bg-transparent border-0 text-white ps-0"
+                  >
+                    <a href="#" class="text-decoration-none text-warning"
+                      >Mobile Apps</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-3 col-xxl-3 mt-4 mt-md-0 px-2 px-sm-0">
+                <h3 class="text-success text-uppercase fs-6">
+                  Digital Marketing
+                </h3>
+                <ul class="list-group list-unstyled">
+                  <li
+                    class="list-group-item bg-transparent border-0 text-white ps-0"
+                  >
+                    <a href="#" class="text-decoration-none text-warning"
+                      >Lead Generation</a
+                    >
+                  </li>
+                  <li
+                    class="list-group-item bg-transparent border-0 text-white ps-0"
+                  >
+                    <a href="#" class="text-decoration-none text-warning"
+                      >Chatbot Builders</a
+                    >
+                  </li>
+                  <li
+                    class="list-group-item bg-transparent border-0 text-white ps-0"
+                  >
+                    <a href="#" class="text-decoration-none text-warning"
+                      >PPC/SEO</a
+                    >
+                  </li>
+                  <li
+                    class="list-group-item bg-transparent border-0 text-white ps-0"
+                  >
+                    <a href="#" class="text-decoration-none text-warning"
+                      >Social Media</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 order-lg-2 order-md-first">
+            <div
+              class="d-flex gap-2 justify-content-center justify-content-md-end pe-2"
+            >
+              <a href="#" class="social-icon"
+                ><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a
+              ><a href="#" class="social-icon"
+                ><i class="fa-brands fa-facebook-f"></i></a
+              ><a href="#" class="social-icon"
+                ><i class="fa-brands fa-x-twitter"></i></a
+              ><a href="#" class="social-icon"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid pb-3 pt-3" style="background-color: #012a6a">
+        <div class="px-4">
+          <div class="d-flex flex-md-row position-relative row">
+            <div
+              class="col-md-12 d-md-flex justify-content-md-between gap-md-5"
+            >
+              <div class="pb-2 text-light">
+                <a
+                  href="#"
+                  class="text-decoration-none text-light fs-6 me-1 opacity-75"
+                  >Privacy Policy</a
+                >
+                |
+                <a
+                  href="#"
+                  class="text-decoration-none text-light fs-6 ms-1 opacity-75"
+                  >Terms of Service</a
+                >
+                |<span
+                  class="text-decoration-none text-light fs-6 ms-1 opacity-75"
+                  >&copy; 2024 Elevate X.</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script>
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Create a reusable function to handle the animation
+        function setupAnimations() {
+          const animatedElements =
+            document.querySelectorAll(".animate-on-scroll");
+
+          const observer = new IntersectionObserver(
+            function (entries) {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  const boxes = entry.target.querySelectorAll(".slide-in-box");
+                  boxes.forEach((box, index) => {
+                    setTimeout(() => {
+                      box.classList.add("visible");
+                    }, index * 200);
+                  });
+                  // Unobserve after animation is triggered
+                  observer.unobserve(entry.target);
+                }
+              });
+            },
+            {
+              root: null,
+              rootMargin: "0px",
+              threshold: 0.1,
+            }
+          );
+
+          animatedElements.forEach((element) => {
+            observer.observe(element);
+          });
+        }
+
+        // Call the function to set up animations
+        setupAnimations();
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Set initial state for the first item
+        const firstHeader = document.querySelector(
+          "#headingOne123 .brand-edge-accordion-header"
+        );
+        if (firstHeader) {
+          firstHeader.classList.add("expanded-header");
+        }
+
+        // Listen for Bootstrap collapse events to update icons
+        const collapseElements = document.querySelectorAll(
+          "#brandEdge .accordion-collapse"
+        );
+        collapseElements.forEach((collapse) => {
+          // Get the associated button and icon
+          const headerId = collapse.getAttribute("aria-labelledby");
+          const header = document.querySelector(
+            `#${headerId} .brand-edge-accordion-header`
+          );
+          const icon = header.querySelector(".custom-toggle-icon-123");
+
+          // When a collapse is shown
+          collapse.addEventListener("show.bs.collapse", function () {
+            // Remove expanded class from all headers
+            document
+              .querySelectorAll("#brandEdge .brand-edge-accordion-header")
+              .forEach((h) => {
+                h.classList.remove("expanded-header");
+                const i = h.querySelector(".custom-toggle-icon-123");
+                i.classList.remove("fa-minus");
+                i.classList.add("fa-plus");
+              });
+
+            // Add expanded class to this header
+            header.classList.add("expanded-header");
+            icon.classList.remove("fa-plus");
+            icon.classList.add("fa-minus");
+          });
+
+          // When a collapse is hidden
+          collapse.addEventListener("hide.bs.collapse", function () {
+            // Remove expanded class from this header
+            header.classList.remove("expanded-header");
+            icon.classList.remove("fa-minus");
+            icon.classList.add("fa-plus");
+          });
+        });
+
+        // Initialize icons based on expanded state
+        collapseElements.forEach((collapse) => {
+          const headerId = collapse.getAttribute("aria-labelledby");
+          const header = document.querySelector(
+            `#${headerId} .brand-edge-accordion-header`
+          );
+          const icon = header.querySelector(".custom-toggle-icon-123");
+
+          if (collapse.classList.contains("show")) {
+            icon.classList.remove("fa-plus");
+            icon.classList.add("fa-minus");
+            header.classList.add("expanded-header");
+          } else {
+            icon.classList.remove("fa-minus");
+            icon.classList.add("fa-plus");
+            header.classList.remove("expanded-header");
+          }
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get the carousel element
+        const brandingCarousel = document.getElementById(
+          "brandingCarouselUnique"
+        );
+
+        if (brandingCarousel) {
+          // Initialize the Bootstrap carousel
+          const brandingCarouselInstance = new bootstrap.Carousel(
+            brandingCarousel,
+            {
+              interval: false,
+              wrap: true,
+            }
+          );
+
+          // Get all carousel items
+          const brandingCarouselItems =
+            brandingCarousel.querySelectorAll(".carousel-item");
+          const totalBrandingSlides = brandingCarouselItems.length;
+
+          // Function to get the current active slide index
+          function getBrandingActiveIndex() {
+            for (let i = 0; i < brandingCarouselItems.length; i++) {
+              if (brandingCarouselItems[i].classList.contains("active")) {
+                return i;
+              }
+            }
+            return 0;
+          }
+
+          // Function to navigate to a specific slide with right-to-left animation
+          function navigateToBrandingSlide(targetIndex) {
+            const currentIndex = getBrandingActiveIndex();
+
+            // Skip if already on the target slide
+            if (currentIndex === targetIndex) return;
+
+            // Get the target slide element
+            const targetSlide = brandingCarouselItems[targetIndex];
+
+            // Remove all transition classes that might be present
+            brandingCarouselItems.forEach((item) => {
+              item.classList.remove(
+                "carousel-item-next",
+                "carousel-item-prev",
+                "carousel-item-start",
+                "carousel-item-end"
+              );
+            });
+
+            // Add the appropriate classes for right-to-left transition
+            targetSlide.classList.add("carousel-item-next");
+
+            // Force reflow
+            void targetSlide.offsetWidth;
+
+            // Add transition classes
+            brandingCarouselItems[currentIndex].classList.add(
+              "carousel-item-start"
+            );
+            targetSlide.classList.add("carousel-item-end");
+
+            // Update active classes after transition
+            setTimeout(() => {
+              brandingCarouselItems[currentIndex].classList.remove(
+                "active",
+                "carousel-item-start"
+              );
+              targetSlide.classList.remove(
+                "carousel-item-next",
+                "carousel-item-end"
+              );
+              targetSlide.classList.add("active");
+
+              // Update indicator active state
+              updateBrandingIndicators(targetIndex);
+            }, 600); // Bootstrap transition duration
+          }
+
+          // Function to update indicators active state
+          function updateBrandingIndicators(activeIndex) {
+            const indicators =
+              brandingCarousel.querySelectorAll(".custom-indicator");
+            indicators.forEach((indicator, index) => {
+              if (index === activeIndex) {
+                indicator.classList.add("active");
+                indicator.setAttribute("aria-current", "true");
+              } else {
+                indicator.classList.remove("active");
+                indicator.removeAttribute("aria-current");
+              }
+            });
+          }
+
+          // Previous button click handler
+          document
+            .getElementById("prevButton")
+            .addEventListener("click", function () {
+              const currentIndex = getBrandingActiveIndex();
+              const prevIndex =
+                currentIndex === 0 ? totalBrandingSlides - 1 : currentIndex - 1;
+              navigateToBrandingSlide(prevIndex);
+            });
+
+          // Next button click handler
+          document
+            .getElementById("nextButton")
+            .addEventListener("click", function () {
+              const currentIndex = getBrandingActiveIndex();
+              const nextIndex =
+                currentIndex === totalBrandingSlides - 1 ? 0 : currentIndex + 1;
+              navigateToBrandingSlide(nextIndex);
+            });
+
+          // Custom indicator click handlers
+          const indicators =
+            brandingCarousel.querySelectorAll(".custom-indicator");
+          indicators.forEach((indicator) => {
+            indicator.addEventListener("click", function () {
+              const targetIndex = parseInt(
+                this.getAttribute("data-slide-index")
+              );
+              navigateToBrandingSlide(targetIndex);
+            });
+          });
+
+          // Custom navigation links in the white box
+          const navLinks =
+            brandingCarousel.querySelectorAll(".custom-nav-link");
+          navLinks.forEach((link) => {
+            link.addEventListener("click", function (e) {
+              e.preventDefault();
+              const targetIndex = parseInt(
+                this.getAttribute("data-slide-index")
+              );
+              navigateToBrandingSlide(targetIndex);
+            });
+          });
+        }
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Create a reusable function to handle the animation
+        function setupAnimations() {
+          const animatedElements =
+            document.querySelectorAll(".animate-on-scroll");
+
+          const observer = new IntersectionObserver(
+            function (entries) {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  const boxes = entry.target.querySelectorAll(".slide-in-box");
+                  boxes.forEach((box, index) => {
+                    setTimeout(() => {
+                      box.classList.add("visible");
+                    }, index * 200);
+                  });
+                  // Unobserve after animation is triggered
+                  observer.unobserve(entry.target);
+                }
+              });
+            },
+            {
+              root: null,
+              rootMargin: "0px",
+              threshold: 0.1,
+            }
+          );
+
+          animatedElements.forEach((element) => {
+            observer.observe(element);
+          });
+        }
+
+        // Call the function to set up animations
+        setupAnimations();
+      });
+    </script>
+    <script>
+      function toggleCardBodyBg(button) {
+        // Get all card bodies
+        const allCardBodies = document.querySelectorAll(".card-body");
+
+        // Reset all card bodies to default background
+        allCardBodies.forEach((cardBody) => {
+          cardBody.style.backgroundColor = "rgba(16, 59, 35, 0.95)";
+        });
+
+        // Get the collapse element related to this button
+        const collapseId = button.getAttribute("data-bs-target");
+        const collapseElement = document.querySelector(collapseId);
+
+        // Check if the collapse is expanding or collapsing
+        if (!collapseElement.classList.contains("show")) {
+          // If expanding, darken this card body
+          button.closest(".card-body").style.backgroundColor =
+            "rgba(0, 0, 0, 0.7)";
+        }
+
+        // Update the button text
+        const buttonSpan = button.querySelector("span");
+        if (collapseElement.classList.contains("show")) {
+          buttonSpan.textContent = "+";
+        } else {
+          buttonSpan.textContent = "-";
+        }
+      }
+
+      // Initialize event listeners for all collapse events
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".collapse").forEach((collapse) => {
+          collapse.addEventListener("hidden.bs.collapse", function () {
+            this.closest(".card-body").style.backgroundColor =
+              "rgba(16, 59, 35, 0.95)";
+            const button = this.previousElementSibling.querySelector("button");
+            button.querySelector("span").textContent = "+";
+          });
+
+          collapse.addEventListener("show.bs.collapse", function () {
+            this.closest(".card-body").style.backgroundColor =
+              "rgba(0, 0, 0, 0.7)";
+            const button = this.previousElementSibling.querySelector("button");
+            button.querySelector("span").textContent = "-";
+          });
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggleBtns = document.querySelectorAll(".toggle-btn");
+
+        toggleBtns.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            const icon = this.querySelector(".toggle-icon");
+            const targetId = this.getAttribute("data-bs-target");
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement.classList.contains("show")) {
+              icon.textContent = "+";
+            } else {
+              icon.textContent = "-";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
