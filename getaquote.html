@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ElevateX - Digital Solutions</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Select2 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para iconos sociales -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Select2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <style>
+      .info::placeholder{
+        color: #ebb91d;
+      }
+
+      .project-info::placeholder{
+        color: #ebb91d;
+      }
+
+            
+      .form-check-input{
+        background-color: transparent;
+        border-color: #ebb91d;
+      }
+      .services-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .service-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        width: 100%;
+        justify-content: space-evenly;
+      }
+      .service-item {
+        background-color: black;
+        color: #ebb91d;
+        padding: 10px 20px;
+        border: 2px solid #ebb91d;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        transition: 0.3s;
+        margin-top: 10px;
+        display: inline-block;
+        /* ✅ Nuevo: uniformidad */
+  min-width: 250px; /* ajusta según tu diseño */
+  text-align: center;
+      }
+      .service-item:hover {
+        background-color: #ebb91d;
+        color: black;
+      }
+      .frm-submit:hover{
+        background-color: #ebb91d!important;
+        color: #030337!important;
+      } 
+
+      .select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.select-wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  padding: 10px 40px 10px 10px; /* espacio a la derecha para la flecha */
+  font-size: 16px;
+  background-color: #000033;
+  color: orange;
+  border: 1px solid #3377ff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Flecha */
+.select-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid orange; /* Aumenta el tamaño */
+}
+
+
+
+  </style>
+    <script>
+      window.addEventListener('scroll', function () {
+                const navbar = document.querySelector('.navbar');
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+  </script>
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <!-- Navbar -->
+   <nav class="bg-transparent fixed-top navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid p-0 py-1" style="max-width: 95%;">
+                <a class="navbar-brand" href="/"><img src="images/logo.png" alt="Brand Logo" class="img-fluid" style="max-width: 150px;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav fs-5 gap-4 mx-auto">
+                        <li class="nav-item"> <a class="active fs-18 fw-normal nav-link text-uppercase text-warning" aria-current="page" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item"> <a class="fs-18 fw-normal nav-link text-uppercase text-warning" href="branding.html">Services</a>
+                        </li>
+                        <li class="nav-item"> <a class="fs-18 fw-normal nav-link text-uppercase text-warning" href="#">CareerS</a>
+                        </li>
+                        <li class="nav-item"> <a class="fs-18 fw-normal nav-link text-uppercase text-warning" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-2"><a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a><a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a><a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a><a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                        <button class="border-0 btn btn-gradient fs-6 fw-bold ms-4 px-4 text-uppercase">Get a
+                            Quote
+</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+<!--Seccion uno-->
+<section class="hero vh-100 " style="position: relative; overflow: hidden; height: 150vh; ">
+  <div class="image-container" >
+    <img src="images/wanna.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: -1; ">
+    <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: black; opacity: 0.3;">
+
+  </div>
+
+ </div>
+ 
+  <div class="container d-flex flex-column justify-content-center text-white vh-100" style="position: relative; z-index: 2;">
+      <div class="d-flex flex-column justify-content-center">
+          <h1 class="display-5 fw-bolder lh-1 text-warning text-center" style="color: #ebb91d!important; font-size: 52px!important; text-transform: uppercase;" ><span class="d-block">Wanna get to New Heights?</span> 
+            <span class="d-block fw-bolder">Let's Talk</span>    
+          </h1>
+          <p class="fw-normal py-4 text-warning text-center text-white" style="font-size: 22px!important;">
+             <span class="d-md-block">Reach out to us for exceptional services tailored to boost your digital marketing with</span>
+             <span class="d-md-block">measurable ROI.</span>
+
+          </p> 
+      </div>
+  </div>
+  <div class="container" style="margin-top: -8%; ">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="stock-ticker py-4">
+          <ul>
+            <!-- Elementos originales -->
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">Start
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                A Project 
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">SOAR
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                BEYOND LIMITS
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">PEAK
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                PERFORMANCE
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">ELEVATE
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                DON'T HESITATE
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">SUCCESS
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                FUELS SUCCESS
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">RISE
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                WITH PURPOSE
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">UPWARD
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                BOND
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">THRIVE
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                AND RISE
+              </span>
+            </li>
+            
+            <!-- Copia de los elementos para el bucle infinito -->
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">Start
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                A Project 
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">SOAR
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                BEYOND LIMITS
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">PEAK
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                PERFORMANCE
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">ELEVATE
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                DON'T HESITATE
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">SUCCESS
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                FUELS SUCCESS
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">RISE
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                WITH PURPOSE
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">UPWARD
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                BOND
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">THRIVE
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                AND RISE
+              </span>
+            </li>
+
+            <!-- Copia de los elementos para el bucle infinito -->
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">Start
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                A Project 
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">SOAR
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                BEYOND LIMITS
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">PEAK
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                PERFORMANCE
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">ELEVATE
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                DON'T HESITATE
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">SUCCESS
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                FUELS SUCCESS
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">RISE
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                WITH PURPOSE
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">UPWARD
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                BOND
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">THRIVE
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                AND RISE
+              </span>
+            </li>
+
+            <!-- Copia de los elementos para el bucle infinito -->
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">Start
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                A Project 
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">SOAR
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                BEYOND LIMITS
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">PEAK
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                PERFORMANCE
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">ELEVATE
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                DON'T HESITATE
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">SUCCESS
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                FUELS SUCCESS
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">RISE
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                WITH PURPOSE
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">UPWARD
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                BOND
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">THRIVE
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                AND RISE
+              </span>
+            </li>
+            <!-- Copia de los elementos para el bucle infinito -->
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">Start
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                A Project 
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">SOAR
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                BEYOND LIMITS
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">PEAK
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                PERFORMANCE
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">ELEVATE
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                DON'T HESITATE
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">SUCCESS
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                FUELS SUCCESS
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">RISE
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                WITH PURPOSE
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">UPWARD
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                BOND
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">THRIVE
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                AND RISE
+              </span>
+            </li>
+            <!-- Copia de los elementos para el bucle infinito -->
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">Start
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                A Project 
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">SOAR
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                BEYOND LIMITS
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">PEAK
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                PERFORMANCE
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">ELEVATE
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                DON'T HESITATE
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">SUCCESS
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                FUELS SUCCESS
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">RISE
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                WITH PURPOSE
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">UPWARD
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                BOND
+              </span>
+            </li>
+            <li class="fw-bold h3 text-center text-uppercase text-white-50">THRIVE
+              <span class="d-block fs-6 fw-semibold border-bottom border-primary border-opacity-75 pb-2 border-3 text-uppercase">
+                AND RISE
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div> 
+  
+  
+</section>
+
+
+<!--Seccion dos-->
+<section>
+  <div class="container-fluid" style="background-color: #030337; padding: 80px; height: 100%; max-width: 100%;">    
+       
+      <form>
+        <div class="container">
+          <p class="fs-18" style="color: #ebb91d; margin-top: 30px">
+            Discover how cost-effective we can be. Fill out the Questionnaire
+          </p>
+          <h2 class="fw-bold" style="color: #fff; font-size: 48px !important">
+            Get a Free Quote
+          </h2>
+          <p class="fs-18" style="color: #FFF; margin-top: 30px; font-weight: bold; ">Basic Info</p>
+
+          <div class="row">
+            <div class="col-md-3">
+              <input
+                type="text"
+                class="form-control info fs-18"
+                placeholder="Full name *"
+                style="background-color: transparent; padding: 20px; font-size: 18px; color: #ebb91d;"
+                required
+              />
+            </div>
+            <div class="col-md-3">
+              <input
+                type="email"
+                class="form-control info fs-18"
+                placeholder="Email Address *"
+                style="background-color: transparent; padding: 20px; font-size: 18px; color: #ebb91d;"
+                required
+              />
+            </div>
+            <div class="col-md-3">
+              <input
+                type="tel"
+                class="form-control info fs-18"
+                placeholder="Mobile Number *"
+                style="background-color: transparent; padding: 20px; font-size: 18px; color: #ebb91d;"
+                required
+              />
+            </div>
+            <div class="col-md-3">
+              <input
+                type="url"
+                class="form-control info fs-18"
+                placeholder="Website URL"
+                style="background-color: transparent; padding: 20px; font-size: 18px; color: #ebb91d;"
+
+              />
+            </div>
+          </div>
+          <h6 class="mt-4 fs-18" style="color: #fff; font-weight: bold">
+            Project type
+          </h6>
+          <div class="row">
+            <div class="col-md-4">
+              <button
+                class="form-control project-info custom-placeholder fw-bold project-button"
+                id="creative"
+                style="background-color: transparent; color:#ebb91d; text-align: start; font-size: 22px; padding: 20px;"
+              >
+                Creative
+              </button>
+            </div>
+            <div class="col-md-4">
+              <button
+                class="form-control project-info custom-placeholder fw-bold project-button"
+                id="web"
+                style="background-color: transparent; color:#ebb91d; text-align: start; font-size: 22px; padding: 20px;"
+              >
+                Web Service
+              </button>
+            </div>
+            <div class="col-md-4">
+              <button
+                class="form-control project-info custom-placeholder fw-bold project-button"
+                id="marketing"
+                style="background-color: transparent; color: #ebb91d; text-align: start; font-size: 22px; padding: 20px;"
+              >
+                Digital Marketing
+              </button>
+            </div>
+          </div>
+          <div
+            id="services-container"
+            class="services-grid"
+            style="
+              background-color: black;
+              border-color: 1px solid #ebb91d;
+              padding: 10px;
+              min-height: 150px;
+            "
+          ></div>
+          <div
+            id="budget-section"
+            style="display: none; background-color: black; padding: 20px"
+          >
+            <h6 class="fs-18" style="color: #FFF; font-weight: bold;">
+              Design & Development Budget
+            </h6>
+            <div class="row">
+              <div class="col-sm-3 pt-2">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" />
+                  <label class="form-check-label" style="color: #ebb91d"
+                    >$1000</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" />
+                  <label class="form-check-label" style="color: #ebb91d"
+                    >$10000-$15000</label
+                  >
+                </div>
+              </div>
+              <div class="col-sm-3 pt-2">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" />
+                  <label class="form-check-label" style="color: #ebb91d"
+                    >$1000-$2500</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" />
+                  <label class="form-check-label" style="color: #ebb91d"
+                    >$15000-$20000</label
+                  >
+                </div>
+              </div>
+              <div class="col-sm-3 pt-2">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" />
+                  <label class="form-check-label" style="color: #ebb91d"
+                    >$2500-$5000</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" />
+                  <label class="form-check-label" style="color: #ebb91d"
+                    >$20000-25000+</label
+                  >
+                </div>
+              </div>
+              <div class="col-sm-3 pt-2">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" />
+                  <label class="form-check-label" style="color: #ebb91d"
+                    >$5000-$10000</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+          id="recurrent-service-section"
+          style="display: none; background-color: #000; padding: 20px"
+        >
+          <h6 class="fs-18" style="color: #FFF; font-weight: bold">
+            Will this be a recurrent service?
+          </h6>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="recurrent-yes"
+              style="background-color: transparent; border-color: #ebb91d;"
+            />
+            <label class="form-check-label" for="recurrent-yes" style="color: #ebb91d;">Yes</label>
+          </div>
+        </div>
+          <div
+            id="marketing-section"
+            style="display: none; background-color: #000; padding: 20px"
+          >
+            <h6 class="fs-18" style="color: #FFF; font-weight: bold">
+              Marketing Budget P/M *
+            </h6>
+            <div class="row" style="color: #ebb91d;">
+              <div class="col-sm-3 pt-2">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" />
+                  <label class="form-check-label">$1,000</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" />
+                  <label class="form-check-label">$4,000-$5,000</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" />
+                  <label class="form-check-label">$8,000-$9,000</label>
+                </div>
+              </div>
+              <div class="col-sm-3 pt-2">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" />
+                  <label class="form-check-label">$1,000-$2,000</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" />
+                  <label class="form-check-label">$5,000-$6,000</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" />
+                  <label class="form-check-label">$9,000-$10,000</label>
+                </div>
+              </div>
+              <div class="col-sm-3 pt-2">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" />
+                  <label class="form-check-label">$2,000-$3,000</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" />
+                  <label class="form-check-label">$6,000-$7,000</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" />
+                  <label class="form-check-label">$10,000+</label>
+                </div>
+              </div>
+              <div class="col-sm-3 pt-2">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" />
+                  <label class="form-check-label">$3,000-$4,000</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" />
+                  <label class="form-check-label">$7,000-$8,000</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        
+
+          <textarea
+          class="form-control project-info"
+          rows="4"
+          placeholder="Project details*"
+          style="margin-top: 20px; background-color: transparent; color: #ebb91d;"
+        ></textarea>
+        <h6 class="mt-4 fs-18" style="color: #fff">
+          How did you here about us?
+        </h6>
+
+        <div class="select-wrapper" style="margin-top: 20px;">
+          <select id="customSelect" style="width: 100%;">
+            <option value="" selected disabled>Please select</option>
+            <option value="1">Google</option>
+            <option value="2">Facebook</option>
+            <option value="3">Instagram</option>
+            <option value="4">LinkedIn</option>
+            <option value="5">X</option>
+          </select>
+        </div>
+          
+
+        <div class="mt-3">
+          <button
+            class="btn frm-submit"
+            style="margin-top: 15px; padding: 20px; background: transparent; color: #FFF; border-color: #ebb91d;"
+          >
+            Submit Form
+          </button>
+        </div>
+                   
+        </div>
+        
+      </form>
+    </div>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const projectButtons = document.querySelectorAll(".project-button");
+        const servicesContainer = document.getElementById("services-container");
+        const budgetSection = document.getElementById("budget-section");
+        const marketingSection = document.getElementById("marketing-section");
+        const recurrentServiceSection = document.getElementById("recurrent-service-section");
+        const recurrentYesInput = document.getElementById("recurrent-yes");
+    
+        const projectServices = {
+          "Creative": ["Branding", "Graphic Design", "UI/UX Design", "Content Creation"],
+          "Web Service": ["Web Design", "Web Development", "Web Support & Hosting", "Mobile Apps"],
+          "Digital Marketing": ["Lead Generation", "Chatbot Builders", "PPC/SEO", "Social Media Marketing"]
+        };
+    
+        let selectedProjects = new Set();
+        let selectedServices = new Set();
+    
+        const marketingServices = new Set([
+          "Social Media Marketing",
+          "PPC Advertising",
+          "Email Marketing",
+          "Content Strategy"
+        ]);
+    
+        const recurrentServices = new Set([
+          "Graphic Design",
+          "Content Creation",
+          "Web Development",
+          "Web Support & Hosting",
+          "Mobile Apps",
+          "Lead Generation",
+          "PPC/SEO",
+          "Social Media Marketing"
+        ]);
+    
+        const nonRecurrentEligibleServices = new Set([
+          "Branding",
+          "UI/UX Design",
+          "Web Design"
+        ]);
+    
+        projectButtons.forEach(button => {
+          button.addEventListener("click", function () {
+            let selectedProject = this.innerText.trim();
+    
+            if (selectedProjects.has(selectedProject)) {
+              selectedProjects.delete(selectedProject);
+              removeServices(selectedProject);
+              this.style.backgroundColor = "transparent";
+              this.style.color = "#ebb91d";
+            } else {
+              selectedProjects.add(selectedProject);
+              addServices(selectedProject);
+              this.style.backgroundColor = "#ebb91d";
+              this.style.color = "#030337";
+            }
+          });
+        });
+    
+        function addServices(project) {
+          let row = document.createElement("div");
+          row.className = "service-row";
+          row.dataset.project = project;
+    
+          projectServices[project].forEach((service) => {
+            let serviceItem = document.createElement("div");
+            serviceItem.className = "service-item";
+            serviceItem.innerText = service;
+            serviceItem.dataset.originalText = service;
+            row.appendChild(serviceItem);
+          });
+    
+          servicesContainer.appendChild(row);
+        }
+    
+        function removeServices(project) {
+          let rows = document.querySelectorAll(".service-row");
+          rows.forEach((row) => {
+            if (row.dataset.project === project) {
+              row.querySelectorAll(".service-item").forEach(item => {
+                const service = item.dataset.originalText;
+                if (selectedServices.has(service)) {
+                  selectedServices.delete(service);
+                }
+              });
+              servicesContainer.removeChild(row);
+            }
+          });
+    
+          updateVisibility();
+        }
+    
+        servicesContainer.addEventListener("click", function (event) {
+          if (event.target.classList.contains("service-item")) {
+            let selectedService = event.target.dataset.originalText;
+    
+            if (selectedServices.has(selectedService)) {
+              selectedServices.delete(selectedService);
+              event.target.style.backgroundColor = "black";
+              event.target.style.color = "#ebb91d";
+              event.target.innerText = event.target.dataset.originalText;
+            } else {
+              selectedServices.add(selectedService);
+              event.target.style.backgroundColor = "#ebb91d";
+              event.target.style.color = "black";
+              event.target.innerText = "✓ " + event.target.dataset.originalText;
+            }
+    
+            updateVisibility();
+          }
+        });
+    
+        recurrentYesInput.addEventListener("change", function () {
+          marketingSection.style.display = this.checked ? "block" : "none";
+        });
+    
+        function updateVisibility() {
+          const hasServices = selectedServices.size > 0;
+    
+          // Mostrar Design & Development Budget si hay servicios
+          budgetSection.style.display = hasServices ? "block" : "none";
+    
+          // Mostrar Marketing Budget solo si el checkbox está seleccionado
+          marketingSection.style.display = recurrentYesInput.checked ? "block" : "none";
+    
+          // Mostrar Recurrent Service si al menos un servicio NO está en los excluidos
+          const hasEligibleService = [...selectedServices].some(
+            (service) => !nonRecurrentEligibleServices.has(service)
+          );
+    
+          if (hasServices && hasEligibleService) {
+            recurrentServiceSection.style.display = "block";
+          } else {
+            recurrentServiceSection.style.display = "none";
+            recurrentYesInput.checked = false;
+            marketingSection.style.display = "none";
+          }
+        }
+      });
+    </script>
+    
+
+    
+    
+    
+    
+</section>
+
+<!--Seccion tres-->
+<section class="main-section-get-in-touch">
+  <h1 class="title-get-in-touch" style="font-size: 48px!important;">Get in Touch!</h1>
+  <h2 style="margin-top: 20px!important;">Ready to take your business to the next level?</h2>
+  <p class="subtitle-get-in-touch" style="margin-top: 10px!important;">
+    Contact us today to discuss your project and discover how we can bring
+    your ideas to life.
+  </p>
+
+  <h2 class="description-get-in-touch" style="margin-top: 20px!important;">
+    Let's Build Something Amazing Together!
+  </h2>
+
+  <button class="btn contact-btn-get-in-touch" style="margin-top: 20px!important;">CONTACT US</button>
+</section>
+<!-- Footer -->
+
+<footer class="bg-black pt-5" >
+  <div class="container pb-5" >
+      <div class="row">
+        <div class="align-items-lg-start col-md-3 d-flex flex-column">
+          <img src="images/logo.png" alt="" class="img-fluid mb-5">
+          <a href="" class="fs-6 pb-3 pt-2 text-decoration-none text-white"><i class="fa-phone fa-solid me-1 text-success" aria-hidden="true" style="color: #00ff66!important"></i>
+          +1 (347) 818-4696 | 347-818-4696</a><a href="" class="fs-6 text-decoration-none text-white"><i class="fa-envelope fa-solid me-1 text-success" aria-hidden="true" style="color:#00ff66!important"></i>INFO@ELEVATEXDS.COM</a>
+      </div>
+          <div class="col-md-7">
+              <div class="row">
+                  <div class="col-md-3 col-xxl-3 px-0">
+                    <h3 style="font-weight: normal!important;"> <li class="bg-transparent border-0 list-group-item text-white ps-0">
+                      <a href="aboutus.html" class="text-uppercase" style="color: #FFF;">About Us</a>
+                  </li></h3>
+                    <ul class="list-group list-unstyled">
+                        <li class="bg-transparent border-0 list-group-item text-white ps-0">
+                            <a href="#" class="text-uppercase" style="color: #FFF;">Services</a>
+                        </li>
+                        <li class="bg-transparent border-0 list-group-item text-white ps-0">
+                            <a href="careers.html" class=" text-uppercase" style="color: #FFF;">Careers</a>
+                        </li>
+                        <li class="bg-transparent border-0 list-group-item text-white ps-0">
+                            <a href="getintouch.html" class=" text-uppercase" style="color: #FFF;">Contact</a>
+                        </li>
+                        <li class="bg-transparent border-0 list-group-item text-white ps-0">
+                            <a href="getaquote.html" class=" text-uppercase" style="color: #FFF;">Get A Quote</a>
+                        </li>
+                    </ul>
+                </div>
+                  <div class="col-md-3 col-xxl-3 px-0">
+                      <h3 class="fs-6 text-success text-uppercase" style="color: #00ff66!important; margin-left: 30px;">Creative</h2>
+                      <ul class="list-group list-unstyled">
+                          <li class="bg-transparent border-0 list-group-item text-white ps-0">
+                              <a href="#" class="sub-service" style="color: #ebb91d; margin-left: 30px;">Branding</a>
+                          </li>
+                          <li class="bg-transparent border-0 list-group-item text-white ps-0">
+                              <a href="#" class="sub-service" style="color: #ebb91d; margin-left: 30px;">Graphic Design</a>
+                          </li>
+                          <li class="bg-transparent border-0 list-group-item text-white ps-0">
+                              <a href="uiux.html" class="sub-service" style="color: #ebb91d; margin-left: 30px;">UI/UX Design</a>
+                          </li>
+                          <li class="bg-transparent border-0 list-group-item text-white ps-0">
+                              <a href="contentCreation.html" class="sub-service" style="color: #ebb91d; margin-left: 30px;">Content Creation</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-md-3 px-0">
+                      <h3 class="fs-6 text-success text-uppercase" style="color: #00ff66!important;">Web Services</h2>
+                      <ul class="list-group list-unstyled">
+                          <li class="bg-transparent border-0 list-group-item text-white ps-0">
+                              <a href="webDesign.html" class="sub-service" style="color: #ebb91d;">Web Design</a>
+                          </li>
+                          <li class="bg-transparent border-0 list-group-item text-white ps-0">
+                              <a href="#" class="sub-service" style="color: #ebb91d;">Web Development</a>
+                          </li>
+                          <li class="bg-transparent border-0 list-group-item text-white ps-0">
+                              <a href="#" class="sub-service" style="color: #ebb91d;">Web Support & Hosting</a>
+                          </li>
+                          <li class="bg-transparent border-0 list-group-item text-white ps-0">
+                              <a href="#" class="sub-service" style="color: #ebb91d;">Mobile Apps</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-md-3 col-xxl-3 p-0">
+                      <h3 class="fs-6 text-success text-uppercase" style="color: #00ff66!important;">Digital Marketing</h2>
+                      <ul class="list-group list-unstyled">
+                          <li class="bg-transparent border-0 list-group-item text-white ps-0">
+                              <a href="#" class="sub-service" style="color: #ebb91d;">Lead Generation</a>
+                          </li>
+                          <li class="bg-transparent border-0 list-group-item text-white ps-0">
+                              <a href="#" class="sub-service" style="color: #ebb91d;">Chatbot Builders</a>
+                          </li>
+                          <li class="bg-transparent border-0 list-group-item text-white ps-0">
+                              <a href="ppc.html" class="sub-service" style="color: #ebb91d;">PPC/SEO</a>
+                          </li>
+                          <li class="bg-transparent border-0 list-group-item text-white ps-0">
+                              <a href="#" class="sub-service" style="color: #ebb91d;">Social Media</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-2 col-xxl-2 px-0">
+              <div class="d-flex gap-2 justify-content-end" style="margin-right: 20px;"><a href="#" class=" social-icon" ><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a><a href="#" class=" social-icon"><i class="fa-brands fa-facebook-f"></i></a><a href="#" class=" social-icon"><i class="fa-brands fa-x-twitter"></i></a><a href="#" class=" social-icon"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+</footer>
+<div class="footer-bottom text-white">
+  <p style="margin-left: 20px;">Privacy Policy | Terms of Service | &copy; 2024 Elevate X.</p>
+</div>
+
+    <!-- Scripts de Bootstrap y JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // JavaScript para efectos adicionales
+      document.addEventListener("DOMContentLoaded", function () {
+        // Cambiar el color de la barra de navegación al hacer scroll
+        window.addEventListener("scroll", function () {
+          const navbar = document.querySelector(".navbar");
+          if (window.scrollY > 50) {
+            navbar.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+            navbar.style.padding = "10px 0";
+          } else {
+            navbar.style.backgroundColor = "transparent";
+            navbar.style.padding = "20px 0";
+          }
+        });
+
+        // Animación para los taglines
+        const taglines = document.querySelectorAll(".tagline-item");
+        taglines.forEach((tagline, index) => {
+          setTimeout(() => {
+            tagline.style.opacity = "0";
+            tagline.style.transition = "opacity 0.5s ease-in-out";
+            setTimeout(() => {
+              tagline.style.opacity = "1";
+            }, 300);
+          }, index * 200);
+        });
+      });
+    </script>
+  </body>
+</html>
