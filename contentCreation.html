@@ -2067,7 +2067,57 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
       </div>
     </div>
-    
+     <style>
+                     /* Ocultar flecha nativa */
+    .accordion-button::after {
+      display: none !important;
+    }
+
+   .icon-wrapper1 {
+ display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid #030337;
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  flex: none;
+}
+
+.icon-wrapper1 i {
+  color: #0b0b38;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.plus-icon1 {
+  display: inline;
+}
+
+.minus-icon1 {
+  display: none;
+}
+
+/* Cuando el botón no está colapsado, mostrar el ícono menos */
+.accordion-button:not(.collapsed) .plus-icon1 {
+  display: none;
+}
+
+.accordion-button:not(.collapsed) .minus-icon1 {
+  display: inline;
+}
+
+/* Ajuste de espacio para que ícono y texto no se encimen */
+    .accordion-button {
+      display: flex;
+      align-items: center;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+                  </style>
   </div>
   
 </section>
