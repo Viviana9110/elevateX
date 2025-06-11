@@ -1117,8 +1117,86 @@ document.addEventListener('DOMContentLoaded', function() {
   updateNavLinks(getActiveIndex());
 });
 </script>
-                <style>/* Restore Bootstrap carousel indicator styles */.carousel-indicators { position: relative; display: flex; justify-content: center; margin-right: 15%; margin-left: 15%; list-style: none; } .carousel-indicators [data-bs-target] { box-sizing: content-box; flex: 0 1 auto; width: 30px; height: 3px; margin-right: 3px; margin-left: 3px; text-indent: -999px; cursor: pointer; background-color: #fff; background-clip: padding-box; border: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; opacity: .5; transition: opacity .6s ease; } .carousel-indicators .active { opacity: 1; }</style>                     
-            </div>                 
+<style>
+                /* Restore Bootstrap carousel indicator styles */
+                .carousel-indicators { 
+                  position: relative; 
+                  display: flex; 
+                  justify-content: center; 
+                  margin-right: 15%; 
+                  margin-left: 15%; 
+                  list-style: none; 
+                  } 
+                  
+                  .carousel-indicators [data-bs-target] { 
+                    box-sizing: content-box; 
+                    flex: 0 1 auto; 
+                    width: 30px; 
+                    height: 3px; 
+                    margin-right: 3px; 
+                    margin-left: 3px; 
+                    text-indent: -999px; 
+                    cursor: pointer; 
+                    background-color: #fff; 
+                    background-clip: padding-box; 
+                    border: 0; 
+                    border-top: 10px solid transparent; 
+                    border-bottom: 10px solid transparent; 
+                    opacity: .5; 
+                    transition: opacity .6s ease; 
+                    } 
+                    .carousel-indicators .active { 
+                      opacity: 1; 
+                      }
+                      
+                    @media (max-width: 991.98px) {
+  #brandingCarouselUnique {
+    position: relative;
+    
+  }
+
+  #brandingCarouselUnique .white-box {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(0.5rem);
+    width: 90%;
+    
+  }
+
+  .carousel-indicators-container {
+    position: relative;
+    
+  }
+  
+  /* Responsive tweaks */
+@media (max-width: 767.98px) {
+  #brandingCarouselUnique .white-box {
+    position: static !important;
+    transform: none !important;
+    width: 100% !important;
+        
+  } 
+   .carousel-indicators {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    justify-content: center !important;
+  }
+
+  .navigation-container {
+    margin-left: 0 !important;
+  }
+  
+  .cta-container {
+    margin-top: 1.5rem;
+  }
+}
+
+
+}
+
+                    </style>    
+                                </div>                 
         </div>             
     </section>
 
