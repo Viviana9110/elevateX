@@ -2224,14 +2224,14 @@ document.addEventListener('DOMContentLoaded', function() {
                           
                                                                      
                   </div>
-                  <style>
+                   <style>
                      /* Ocultar flecha nativa */
     .accordion-button::after {
       display: none !important;
     }
 
    .icon-wrapper1 {
-  display: inline-flex;
+ display: flex;
   align-items: center;
   justify-content: center;
   background-color: transparent;
@@ -2239,6 +2239,8 @@ document.addEventListener('DOMContentLoaded', function() {
   border: 1px solid #030337;
   width: 26px;
   height: 26px;
+  flex-shrink: 0;
+  flex: none;
 }
 
 .icon-wrapper1 i {
