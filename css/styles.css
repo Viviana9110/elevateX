@@ -141,7 +141,7 @@ footer a:hover {
 
 .stock-ticker li span {
   display: inline-block; /* Permite que el ancho se ajuste al contenido */
-  border-bottom: 3px solid #013050!important; /* Línea azul */
+  border-bottom: 3px solid #149cf7!important; /* Línea azul */
   padding-bottom: 3px;
   width: fit-content; /* Ajusta el ancho al contenido */
   min-width: 90px;
@@ -155,8 +155,8 @@ footer a:hover {
   display: block;
   width: 28px;
   height: 28px;
-  border-left: 3px solid #013050!important;
-  border-bottom: 3px solid #013050!important;
+  border-left: 3px solid #149cf7!important;
+  border-bottom: 3px solid #149cf7!important;
   transform: rotate(132deg) translate(50%);
   left: 47%;
   position: absolute;
@@ -1814,3 +1814,41 @@ footer h3{
 .footer-bottom p {
   margin-left: 20px;
 }
+
+@media (max-width: 767.98px) {
+  footer .about-grid {
+    flex-direction: row !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+  }
+}
+
+
+@media (max-width: 767.98px) {
+  footer .creative-grid,
+  footer .webservices-grid,
+  footer .marketing-grid {
+    flex-direction: row !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .marketing-grid .d-flex a {
+    white-space: nowrap;
+  }
+}
+
+/* Estilo base para todos los servicios */
+footer a.sub-service {
+  color: #ebb91d;
+  text-decoration: none;
+}
+
+/* Hover blanco + subrayado en todas las resoluciones */
+footer a.sub-service:hover {
+  color: #ffffff !important;
+  text-decoration: underline !important;
+}
+
