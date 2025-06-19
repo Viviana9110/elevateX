@@ -2173,142 +2173,217 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
         <!--Footer-->
-        <footer class="bg-black pt-5" >
-          <style>
-  @media (max-width: 767.98px) {
-    footer .row {
-      flex-direction: column;
-      align-items: center!important;
+      <footer class="bg-black pt-5 text-white">
+  <style>
+    @media (max-width: 767.98px) {
+      footer .row {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      footer .col-md-3,
+      footer .col-md-7,
+      footer .col-md-2 {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        text-align: center;
+      }
+
+      footer img {
+        max-width: 200px;
+        margin-bottom: 10px;
+      }
+
+      footer a,
+      footer li {
+        font-size: 14px;
+      }
+
+      footer h3 {
+        font-size: 16px;
+        margin-top: 20px;
+      }
+
+      footer ul {
+        margin-bottom: 20px;
+      }
+
+      footer .d-flex.justify-content-end {
+        justify-content: center !important;
+        margin-top: 20px;
+      }
     }
+  </style>
 
-    footer .col-md-3,
-    footer .col-md-7,
-    footer .col-md-2 {
-      width: 50% !important;
-      max-width: 50% !important;
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-    }
+  <div class="container pb-5">
+    <div class="row">
+      <!-- Logo + contacto en desktop -->
+      <div class="align-items-lg-start col-md-3 d-flex flex-column d-none d-md-flex">
+        <img src="images/logo.png" alt="Logo" class="img-fluid mb-5">
+        <a href="#" class="fs-6 pb-2 text-decoration-none text-white">
+          <i class="fa-solid fa-phone me-1 text-success" style="color: #00ff66!important;"></i>
+          +1 (347) 818-4696 | 347-818-4696
+        </a>
+        <a href="#" class="fs-6 text-decoration-none text-white">
+          <i class="fa-solid fa-envelope me-1 text-success" style="color: #00ff66!important;"></i>
+          INFO@ELEVATEXDS.COM
+        </a>
+      </div>
 
-    footer img {
-      max-width: 250px!important;
-      margin-bottom: 10px!important;
-    }
-
-    footer a,
-    footer li {
-      font-size: 14px;
-    }
-
-    footer .d-flex.justify-content-end {
-      justify-content: center!important;
-      margin-top: 20px;
-    }
-
-    footer h3 {
-      font-size: 16px;
-      margin-top: 20px;
-    }
-
-    footer ul {
-      margin-bottom: 20px;
-    }
-
-    
-  }
-</style>
-
-          <div class="container pb-5" >
-              <div class="row">
-                <div class="align-items-lg-start col-md-3 d-flex flex-column">
-                  <img src="images/logo.png" alt="" class="img-fluid mb-5">
-                  <a href="" class="fs-6 pb-3 pt-2 text-decoration-none text-white"><i class="fa-phone fa-solid me-1 text-success" aria-hidden="true" style="color: #00ff66!important"></i>
-                  +1 (347) 818-4696 | 347-818-4696</a><a href="" class="fs-6 text-decoration-none text-white"><i class="fa-envelope fa-solid me-1 text-success" aria-hidden="true" style="color:#00ff66!important"></i>INFO@ELEVATEXDS.COM</a>
-              </div>
-                  <div class="col-md-7">
-                      <div class="row">
-                          <div class="col-md-3 col-xxl-3 px-0">
-                            <h3 style="font-weight: normal!important;"> <li class="bg-transparent border-0 list-group-item text-white ps-0">
-                              <a href="aboutus.html" class="text-uppercase" style="color: #FFF;">About Us</a>
-                          </li>
-                        </h3>
-                            <ul class="list-group list-unstyled">
-                                <li class="bg-transparent border-0 list-group-item text-white ps-0">
-                                    <a href="#" class="text-uppercase" style="color: #FFF;">Services</a>
-                                </li>
-                                <li class="bg-transparent border-0 list-group-item text-white ps-0">
-                                    <a href="careers.html" class=" text-uppercase" style="color: #FFF;">Careers</a>
-                                </li>
-                                <li class="bg-transparent border-0 list-group-item text-white ps-0">
-                                    <a href="getintouch.html" class=" text-uppercase" style="color: #FFF;">Contact</a>
-                                </li>
-                                <li class="bg-transparent border-0 list-group-item text-white ps-0">
-                                    <a href="getaquote.html" class=" text-uppercase" style="color: #FFF;">Get A Quote</a>
-                                </li>
-                            </ul>
-                        </div>
-                          <div class="col-md-3 col-xxl-3 px-0">
-                              <h3 class="fs-6 text-success text-uppercase" style="color: #00ff66!important; ">Creative</h2>
-                              <ul class="list-group list-unstyled">
-                                  <li class="bg-transparent border-0 list-group-item text-white ps-0">
-                                      <a href="branding.html" class="sub-service" style="color: #ebb91d; ">Branding</a>
-                                  </li>
-                                  <li class="bg-transparent border-0 list-group-item text-white ps-0">
-                                      <a href="graphicDesign.html" class="sub-service" style="color: #ebb91d; ">Graphic Design</a>
-                                  </li>
-                                  <li class="bg-transparent border-0 list-group-item text-white ps-0">
-                                      <a href="uiux.html" class="sub-service" style="color: #ebb91d; ">UI/UX Design</a>
-                                  </li>
-                                  <li class="bg-transparent border-0 list-group-item text-white ps-0">
-                                      <a href="contentCreation.html" class="sub-service" style="color: #ebb91d; ">Content Creation</a>
-                                  </li>
-                              </ul>
-                          </div>
-                          <div class="col-md-3 px-0">
-                              <h3 class="fs-6 text-success text-uppercase" style="color: #00ff66!important;">Web Services</h2>
-                              <ul class="list-group list-unstyled">
-                                  <li class="bg-transparent border-0 list-group-item text-white ps-0">
-                                      <a href="webDesign.html" class="sub-service" style="color: #ebb91d;">Web Design</a>
-                                  </li>
-                                  <li class="bg-transparent border-0 list-group-item text-white ps-0">
-                                      <a href="webDevelopment.html" class="sub-service" style="color: #ebb91d;">Web Development</a>
-                                  </li>
-                                  <li class="bg-transparent border-0 list-group-item text-white ps-0">
-                                      <a href="webSupport.html" class="sub-service" style="color: #ebb91d;">Web Support & Hosting</a>
-                                  </li>
-                                  <li class="bg-transparent border-0 list-group-item text-white ps-0">
-                                      <a href="mobileApp.html" class="sub-service" style="color: #ebb91d;">Mobile Apps</a>
-                                  </li>
-                              </ul>
-                          </div>
-                          <div class="col-md-3 col-xxl-3 p-0">
-                              <h3 class="fs-6 text-success text-uppercase" style="color: #00ff66!important;">Digital Marketing</h2>
-                              <ul class="list-group list-unstyled">
-                                  <li class="bg-transparent border-0 list-group-item text-white ps-0">
-                                      <a href="leadGeneration.html" class="sub-service" style="color: #ebb91d;">Lead Generation</a>
-                                  </li>
-                                  <li class="bg-transparent border-0 list-group-item text-white ps-0">
-                                      <a href="aiPoweredChatbot.html" class="sub-service" style="color: #ebb91d;">Chatbot Builders</a>
-                                  </li>
-                                  <li class="bg-transparent border-0 list-group-item text-white ps-0">
-                                      <a href="ppc.html" class="sub-service" style="color: #ebb91d;">PPC</a>
-                                       <a href="searchEngine.html" class="sub-service" style="color: #ebb91d;">/ SEO</a>
-                                  </li>
-                                  <li class="bg-transparent border-0 list-group-item text-white ps-0">
-                                      <a href="socialMedia.html" class="sub-service" style="color: #ebb91d;">Social Media</a>
-                                  </li>
-                              </ul>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-md-2 col-xxl-2 px-0">
-                      <div class="d-flex gap-2 justify-content-end" style="margin-right: 20px;"><a href="#" class=" social-icon" ><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a><a href="#" class=" social-icon"><i class="fa-brands fa-facebook-f"></i></a><a href="#" class=" social-icon"><i class="fa-brands fa-x-twitter"></i></a><a href="#" class=" social-icon"><i class="fa-brands fa-instagram"></i></a>
-                      </div>
-                  </div>
-              </div>
+      <!-- Enlaces -->
+      <div class="col-md-7">
+        <div class="row">
+          <!-- Logo solo en mobile -->
+          <div class="d-block d-md-none text-center mb-3">
+            <img src="images/logo.png" alt="Logo" class="img-fluid" style="max-width: 200px;">
           </div>
+
+          <!-- About Us - Desktop -->
+          <div class="col-md-3 px-0 d-none d-md-block">
+            <h3 style="font-weight: normal!important;"> 
+              <li class="border-0 list-group-item text-white ps-0">
+                <a href="aboutus.html" class="text-uppercase" style="color: #FFF;">About Us</a>
+              </li>
+            </h3>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white border-0 ps-0 text-uppercase d-block mb-2">Services</a></li>
+              <li><a href="careers.html" class="text-white border-0 ps-0 text-uppercase d-block mb-2">Careers</a></li>
+              <li><a href="#" class="text-white border-0 ps-0 text-uppercase d-block mb-2">System</a></li>
+              <li><a href="getintouch.html" class="text-white border-0 ps-0 text-uppercase d-block mb-2">Contact</a></li>
+              <li><a href="getaquote.html" class="text-white border-0 ps-0 text-uppercase d-block mb-2">Get A Quote</a></li>
+            </ul>
+          </div>
+
+          <!-- About Us - Mobile en 2 columnas y 3 filas -->
+<div class="d-block d-md-none w-100 mb-4 px-3">
+  <div class="row about-grid row-cols-2 g-3 text-uppercase">
+    <div class="col text-center"><a href="aboutus.html" class="text-white d-block">About Us</a></div>
+    <div class="col text-center"><a href="#" class="text-white d-block">Services</a></div>
+    <div class="col text-center"><a href="careers.html" class="text-white d-block">Careers</a></div>
+    <div class="col text-center"><a href="#" class="text-white d-block">System</a></div>
+    <div class="col text-center"><a href="getintouch.html" class="text-white d-block">Contact</a></div>
+    <div class="col text-center"><a href="getaquote.html" class="text-white d-block">Get A Quote</a></div>
+    <div class="col text-center"><!-- Vacío para mantener la grilla equilibrada --></div>
+  </div>
+</div>
+
+<!-- Creative - Mobile en 2 columnas y 2 filas -->
+<div class="d-block d-md-none w-100 mb-4 px-3">
+  <h3 class="text-success text-uppercase text-center fs-6 mb-3" style="color: #00ff66!important;">Creative</h3>
+  <div class="row creative-grid row-cols-2 g-3 text-uppercase">
+    <div class="col text-center">
+      <a href="branding.html" class="d-block" style="color: #ebb91d;">Branding</a>
+    </div>
+    <div class="col text-center">
+      <a href="graphicDesign.html" class="d-block" style="color: #ebb91d;">Graphic Design</a>
+    </div>
+    <div class="col text-center">
+      <a href="uiux.html" class="d-block" style="color: #ebb91d;">UI/UX Design</a>
+    </div>
+    <div class="col text-center">
+      <a href="contentCreation.html" class="d-block" style="color: #ebb91d;">Content Creation</a>
+    </div>
+  </div>
+</div>
+
+<!-- Web Services - Mobile en 2 columnas y 2 filas -->
+<div class="d-block d-md-none w-100 mb-4 px-3">
+  <h3 class="text-success text-uppercase text-center fs-6 mb-3" style="color: #00ff66!important;">Web Services</h3>
+  <div class="row webservices-grid row-cols-2 g-3 text-uppercase">
+    <div class="col text-center"><a href="webDesign.html" class="d-block" style="color: #ebb91d;">Web Design</a></div>
+    <div class="col text-center"><a href="webDevelopment.html" class="d-block" style="color: #ebb91d;">Web Development</a></div>
+    <div class="col text-center"><a href="webSupport.html" class="d-block" style="color: #ebb91d;">Support & Hosting</a></div>
+    <div class="col text-center"><a href="mobileApp.html" class="d-block" style="color: #ebb91d;">Mobile Apps</a></div>
+  </div>
+</div>
+
+<!-- Digital Marketing - Mobile en 2 columnas y 2 filas -->
+<div class="d-block d-md-none w-100 mb-4 px-3">
+  <h3 class="text-success text-uppercase text-center fs-6 mb-3" style="color: #00ff66!important;">Digital Marketing</h3>
+  <div class="row marketing-grid row-cols-2 g-3 text-uppercase">
+    <div class="col text-center"><a href="leadGeneration.html" class="d-block" style="color: #ebb91d;">Lead Generation</a></div>
+    <div class="col text-center"><a href="aiPoweredChatbot.html" class="d-block" style="color: #ebb91d;">Chatbots</a></div>
+    <div class="col text-center d-flex justify-content-center gap-1">
+  <a href="ppc.html" class="d-inline-block" style="color: #ebb91d;">PPC</a>
+  <span class="text-white" style="color: #ebb91d!important;">/</span>
+  <a href="searchEngine.html" class="d-inline-block" style="color: #ebb91d;">SEO</a>
+</div>
+    <div class="col text-center"><a href="socialMedia.html" class="d-block" style="color: #ebb91d;">Social Media</a></div>
+  </div>
+</div>
+
+
+
+
+
+          <!-- Creative (solo en desktop) -->
+<div class="col-md-3 px-0 d-none d-md-block">
+  <h3 class="text-success text-uppercase fs-6" style="color: #00ff66!important; ">Creative</h3>
+  <ul class="list-unstyled list-group">
+    <li class="bg-transparent border-0 list-group-item text-white ps-0"><a href="branding.html" class="sub-service" style="color: #ebb91d;">Branding</a></li>
+    <li class="bg-transparent border-0 list-group-item text-white ps-0"><a href="graphicDesign.html" class="sub-service" style="color: #ebb91d;">Graphic Design</a></li>
+    <li class="bg-transparent border-0 list-group-item text-white ps-0"><a href="uiux.html" class="sub-service" style="color: #ebb91d;">UI/UX Design</a></li>
+    <li class="bg-transparent border-0 list-group-item text-white ps-0"><a href="contentCreation.html" class="sub-service" style="color: #ebb91d;">Content Creation</a></li>
+  </ul>
+</div>
+
+
           
-            </footer>
+
+          <!-- Web Services (solo desktop) -->
+<div class="col-md-3 px-0 d-none d-md-block">
+  <h3 class="text-success text-uppercase fs-6" style="color: #00ff66!important; ">Web Services</h3>
+  <ul class="list-unstyled list-group">
+    <li class="bg-transparent border-0 list-group-item text-white ps-0"><a href="webDesign.html" class="sub-service" style="color: #ebb91d;">Web Design</a></li>
+    <li class="bg-transparent border-0 list-group-item text-white ps-0"><a href="webDevelopment.html" class="sub-service" style="color: #ebb91d;">Web Development</a></li>
+    <li class="bg-transparent border-0 list-group-item text-white ps-0"><a href="webSupport.html" class="sub-service" style="color: #ebb91d;">Web Support & Hosting</a></li>
+    <li class="bg-transparent border-0 list-group-item text-white ps-0"><a href="mobileApp.html" class="sub-service" style="color: #ebb91d;">Mobile Apps</a></li>
+  </ul>
+</div>
+
+          <!-- Digital Marketing (solo desktop) -->
+<div class="col-md-3 px-0 d-none d-md-block">
+  <h3 class="text-success text-uppercase fs-6" style="color: #00ff66!important; ">Digital Marketing</h3>
+  <ul class="list-unstyled list-group">
+    <li class="bg-transparent border-0 list-group-item text-white ps-0"><a href="leadGeneration.html" class="sub-service" style="color: #ebb91d;">Lead Generation</a></li>
+    <li class="bg-transparent border-0 list-group-item text-white ps-0"><a href="aiPoweredChatbot.html" class="sub-service" style="color: #ebb91d;">Chatbot Builders</a></li>
+    <li class="bg-transparent border-0 list-group-item text-white ps-0">
+      <a href="ppc.html" class="sub-service" style="color: #ebb91d;">PPC</a>
+      <a href="searchEngine.html" class="sub-service" style="color: #ebb91d;"> / SEO</a>
+    </li>
+    <li class="bg-transparent border-0 list-group-item text-white ps-0"><a href="socialMedia.html" class="sub-service" style="color: #ebb91d;">Social Media</a></li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+
+      <!-- Contacto (solo mobile) -->
+      <div class="d-block d-md-none text-center my-4">
+        <a href="#" class="fs-6 d-block text-decoration-none text-white mb-2">
+          <i class="fa-solid fa-phone me-1 text-success" style="color: #00ff66!important; "></i>
+          +1 (347) 818-4696 | 347-818-4696
+        </a>
+        <a href="#" class="fs-6 d-block text-decoration-none text-white">
+          <i class="fa-solid fa-envelope me-1 text-success" style="color: #00ff66!important; "></i>
+          INFO@ELEVATEXDS.COM
+        </a>
+      </div>
+
+      <!-- Redes sociales -->
+      <div class="col-md-2 px-0">
+        <div class="d-flex gap-2 justify-content-end justify-content-md-end" style="margin-right: 20px;">
+          <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
             <div class="footer-bottom text-white">
              <p>Privacy Policy | Terms of Service | &copy; 2024 Elevate X.</p>
             </div>
