@@ -895,7 +895,7 @@
                                   <span class="d-block">FOR YOUR  BRANDING NEEDS</span></h2>
                             </div>
                             <!-- White card overlay (stays fixed across all slides) -->
-                            <div class="bg-white p-3 white-box ">
+                            <div class="bg-white p-3 white-box" style="z-index: 1000;">
                               <p class="fw-bold mb-3 text-center" style="text-transform: uppercase;">Creative Branding. Strategic Insights. Tangible Growth.
                               </p>
                                 </p>
@@ -931,7 +931,7 @@
                                 </ul>
                             </div>
                             <!-- Navigation controls container - moved to bottom center -->
-                            <div class="navigation-container pt-5 mt-5 flex-column justify-content-center w-100" >
+                            <div class="navigation-container pt-5 mt-5 flex-column justify-content-center w-100" style="z-index: -1;">
                                 <!-- Carousel indicators (dots) -->
                                 <div class="carousel-indicators position-static m-0 d-flex justify-content-center w-100" >
                                     <button type="button" data-bs-target="#brandingCarouselUnique" data-bs-slide-to="0" class="custom-indicator active" aria-current="true" aria-label="Slide 1" data-slide-index="0"></button>
@@ -960,22 +960,17 @@
                                                             
                 </div>
                 
-               <script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Get the carousel element
+             <script>
+document.addEventListener('DOMContentLoaded', function () {
   const carousel = document.getElementById('brandingCarouselUnique');
+  const carouselItems = carousel.querySelectorAll('.carousel-item');
+  const totalSlides = carouselItems.length;
 
-  // Initialize the Bootstrap carousel
   const carouselInstance = new bootstrap.Carousel(carousel, {
     interval: false,
     wrap: true
   });
 
-  // Get all carousel items
-  const carouselItems = carousel.querySelectorAll('.carousel-item');
-  const totalSlides = carouselItems.length;
-
-  // Function to get the current active slide index
   function getActiveIndex() {
     for (let i = 0; i < carouselItems.length; i++) {
       if (carouselItems[i].classList.contains('active')) {
@@ -985,7 +980,6 @@ document.addEventListener('DOMContentLoaded', function() {
     return 0;
   }
 
-  // Function to navigate to a specific slide with right-to-left animation
   function navigateToSlide(targetIndex) {
     const currentIndex = getActiveIndex();
     if (currentIndex === targetIndex) return;
@@ -1012,7 +1006,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 600);
   }
 
-  // Function to update indicators
   function updateIndicators(activeIndex) {
     const indicators = carousel.querySelectorAll('.custom-indicator');
     indicators.forEach((indicator, index) => {
@@ -1026,7 +1019,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Function to update nav links and show the dash
   function updateNavLinks(activeIndex) {
     const navLinks = carousel.querySelectorAll('.custom-nav-link');
     navLinks.forEach((link, index) => {
@@ -1041,65 +1033,42 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Button handlers
-  document.getElementById('prevButton').addEventListener('click', function() {
+  // Prev/Next buttons
+  document.getElementById('prevButton').addEventListener('click', function () {
     const currentIndex = getActiveIndex();
     const prevIndex = (currentIndex === 0) ? totalSlides - 1 : currentIndex - 1;
     navigateToSlide(prevIndex);
   });
 
-  document.getElementById('nextButton').addEventListener('click', function() {
+  document.getElementById('nextButton').addEventListener('click', function () {
     const currentIndex = getActiveIndex();
     const nextIndex = (currentIndex === totalSlides - 1) ? 0 : currentIndex + 1;
     navigateToSlide(nextIndex);
   });
 
-  // Custom indicator click
-  const indicators = carousel.querySelectorAll('.custom-indicator');
-  indicators.forEach(indicator => {
-    indicator.addEventListener('click', function() {
-      const targetIndex = parseInt(this.getAttribute('data-slide-index'));
-      navigateToSlide(targetIndex);
-    });
-  });
-
-  // Custom nav links (white box)
-  const navLinks = carousel.querySelectorAll('.custom-nav-link');
-  navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const targetIndex = parseInt(this.getAttribute('data-slide-index'));
-      navigateToSlide(targetIndex);
-    });
-  });
-
-  // Disable Bootstrap default controls
-  const originalTo = bootstrap.Carousel.prototype.to;
-  bootstrap.Carousel.prototype.to = function() {
-    return;
-  };
-  bootstrap.Carousel.prototype.prev = function() {
-    return;
-  };
-  bootstrap.Carousel.prototype.next = function() {
-    return;
-  };
-
-  document.querySelectorAll('[data-bs-slide-to]').forEach(el => {
-    el.addEventListener('click', function(e) {
+  // ✅ Combined handler for both dots and white-box items
+  document.querySelectorAll('[data-bs-slide-to], [data-slide-index]').forEach(el => {
+    el.addEventListener('click', function (e) {
       e.preventDefault();
       e.stopPropagation();
-      const index = parseInt(this.getAttribute('data-slide-index'));
+      const index = parseInt(this.getAttribute('data-slide-index') || this.getAttribute('data-bs-slide-to'));
       if (!isNaN(index)) {
         navigateToSlide(index);
       }
     });
   });
 
-  // Set initial active state for nav link
+  // Disable Bootstrap native controls to avoid conflict
+  bootstrap.Carousel.prototype.to = function () { return; };
+  bootstrap.Carousel.prototype.prev = function () { return; };
+  bootstrap.Carousel.prototype.next = function () { return; };
+
+  // Set initial state
   updateNavLinks(getActiveIndex());
 });
 </script>
+
+
                 <style>
                 /* Restore Bootstrap carousel indicator styles */
                 .carousel-indicators { 
