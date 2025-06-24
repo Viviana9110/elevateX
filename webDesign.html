@@ -2194,9 +2194,27 @@ document.addEventListener('DOMContentLoaded', function() {
       </section>
 
 
-        <!--Footer-->
+       <!--Footer-->
       <footer class="bg-black pt-5 text-white">
   <style>
+    footer a.sub-service {
+      color: #ebb91d;
+      text-decoration: none;
+    }
+
+    footer a.sub-service:hover,
+    footer a.sub-service:active,
+    footer a.sub-service.active-service {
+      color: #ffffff !important;
+      text-decoration: underline !important;
+    }
+
+    /* Opcional: mantener blanco tras tocar en mobile */
+    footer a.sub-service.clicked {
+      color: #ffffff !important;
+      text-decoration: underline !important;
+    }
+
     @media (max-width: 767.98px) {
       footer .row {
         flex-direction: column;
@@ -2295,16 +2313,16 @@ document.addEventListener('DOMContentLoaded', function() {
   <h3 class="text-success text-uppercase text-center fs-6 mb-3" style="color: #00ff66!important;">Creative</h3>
   <div class="row creative-grid row-cols-2 g-3 text-uppercase">
     <div class="col text-center">
-      <a href="branding.html" class="d-block" style="color: #ebb91d;">Branding</a>
+      <a href="branding.html" class="sub-service d-block">Branding</a>
     </div>
     <div class="col text-center">
-      <a href="graphicDesign.html" class="d-block" style="color: #ebb91d;">Graphic Design</a>
+      <a href="graphicDesign.html" class="sub-service d-block">Graphic Design</a>
     </div>
     <div class="col text-center">
-      <a href="uiux.html" class="d-block" style="color: #ebb91d;">UI/UX Design</a>
+      <a href="uiux.html" class="sub-service d-block">UI/UX Design</a>
     </div>
     <div class="col text-center">
-      <a href="contentCreation.html" class="d-block" style="color: #ebb91d;">Content Creation</a>
+      <a href="contentCreation.html" class="sub-service d-block">Content Creation</a>
     </div>
   </div>
 </div>
@@ -2313,10 +2331,10 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="d-block d-md-none w-100 mb-4 px-3">
   <h3 class="text-success text-uppercase text-center fs-6 mb-3" style="color: #00ff66!important;">Web Services</h3>
   <div class="row webservices-grid row-cols-2 g-3 text-uppercase">
-    <div class="col text-center"><a href="webDesign.html" class="d-block" style="color: #ebb91d;">Web Design</a></div>
-    <div class="col text-center"><a href="webDevelopment.html" class="d-block" style="color: #ebb91d;">Web Development</a></div>
-    <div class="col text-center"><a href="webSupport.html" class="d-block" style="color: #ebb91d;">Support & Hosting</a></div>
-    <div class="col text-center"><a href="mobileApp.html" class="d-block" style="color: #ebb91d;">Mobile Apps</a></div>
+    <div class="col text-center"><a href="webDesign.html" class="sub-service d-block">Web Design</a></div>
+    <div class="col text-center"><a href="webDevelopment.html" class="sub-service d-block">Web Development</a></div>
+    <div class="col text-center"><a href="webSupport.html" class="sub-service d-block">Support & Hosting</a></div>
+    <div class="col text-center"><a href="mobileApp.html" class="sub-service d-block">Mobile Apps</a></div>
   </div>
 </div>
 
@@ -2324,14 +2342,14 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="d-block d-md-none w-100 mb-4 px-3">
   <h3 class="text-success text-uppercase text-center fs-6 mb-3" style="color: #00ff66!important;">Digital Marketing</h3>
   <div class="row marketing-grid row-cols-2 g-3 text-uppercase">
-    <div class="col text-center"><a href="leadGeneration.html" class="d-block" style="color: #ebb91d;">Lead Generation</a></div>
-    <div class="col text-center"><a href="aiPoweredChatbot.html" class="d-block" style="color: #ebb91d;">Chatbots</a></div>
+    <div class="col text-center"><a href="leadGeneration.html" class="sub-service d-block">Lead Generation</a></div>
+    <div class="col text-center"><a href="aiPoweredChatbot.html" class="sub-service d-block">Chatbots</a></div>
     <div class="col text-center d-flex justify-content-center gap-1">
-  <a href="ppc.html" class="d-inline-block" style="color: #ebb91d;">PPC</a>
-  <span class="text-white" style="color: #ebb91d!important;">/</span>
-  <a href="searchEngine.html" class="d-inline-block" style="color: #ebb91d;">SEO</a>
-</div>
-    <div class="col text-center"><a href="socialMedia.html" class="d-block" style="color: #ebb91d;">Social Media</a></div>
+      <a href="ppc.html" class="sub-service d-inline-block">PPC</a>
+      <span class="text-white">/</span>
+      <a href="searchEngine.html" class="sub-service d-inline-block">SEO</a>
+    </div>
+    <div class="col text-center"><a href="socialMedia.html" class="sub-service d-block">Social Media</a></div>
   </div>
 </div>
 
@@ -2404,8 +2422,21 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     </div>
   </div>
-</footer>
 
+  <script>
+  document.querySelectorAll('footer a.sub-service').forEach(link => {
+    link.addEventListener('click', function () {
+      // Remover clase activa de todos
+      document.querySelectorAll('footer a.sub-service').forEach(el => {
+        el.classList.remove('active-service');
+      });
+      // Agregar clase al que se clicó
+      this.classList.add('active-service');
+    });
+  });
+</script>
+
+</footer>
             <div class="footer-bottom text-white">
              <p>Privacy Policy | Terms of Service | &copy; 2024 Elevate X.</p>
             </div>
