@@ -1791,8 +1791,19 @@ footer a {
   font-size: 16px!important;
 }
 
+footer a.sub-service {
+  color: #ebb91d;
+  text-decoration: none;
+}
+
 /* Agregar subrayado al pasar el mouse */
 footer a:hover {
+  text-decoration: underline !important;
+}
+
+/* Hover blanco + subrayado (todas las resoluciones) */
+footer a.sub-service:hover {
+  color: #ffffff !important;
   text-decoration: underline !important;
 }
 
@@ -1838,6 +1849,7 @@ footer h3{
   .marketing-grid .d-flex a {
     white-space: nowrap;
   }
+
 }
 
 /* Estilo base para todos los servicios */
@@ -1846,9 +1858,5 @@ footer a.sub-service {
   text-decoration: none;
 }
 
-/* Hover blanco + subrayado en todas las resoluciones */
-footer a.sub-service:hover {
-  color: #ffffff !important;
-  text-decoration: underline !important;
-}
+
 
