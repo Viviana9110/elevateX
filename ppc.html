@@ -34,30 +34,178 @@
         <!-- Barra de navegación -->
         <!-- Navbar -->
         <nav class="bg-transparent fixed-top navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid p-0 py-1" style="max-width: 95%;">
-                <a class="navbar-brand" href="/"><img src="images/logo.png" alt="Brand Logo" class="img-fluid" style="max-width: 150px;"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav fs-5 gap-4 mx-auto">
-                        <li class="nav-item"> <a class="active fs-18 fw-normal nav-link text-uppercase text-warning" aria-current="page" href="aboutus.html">About Us</a>
-                        </li>
-                        <li class="nav-item"> <a class="fs-18 fw-normal nav-link text-uppercase text-warning" href="">Services</a>
-                        </li>
-                        <li class="nav-item"> <a class="fs-18 fw-normal nav-link text-uppercase text-warning" href="careers.html">Careers</a>
-                        </li>
-                        <li class="nav-item"> <a class="fs-18 fw-normal nav-link text-uppercase text-warning" href="">Elevate X System</a>
-                        </li>
-                        <li class="nav-item"> <a class="fs-18 fw-normal nav-link text-uppercase text-warning" href="getintouch.html">Contact</a>
-                        </li>
-                    </ul>
-                    <div class="d-flex align-items-center gap-2"><a href="" class="social-icon"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a><a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a><a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a><a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="getaquote.html" class="border-0 btn btn-gradient fs-6 fw-bold ms-4 px-4 text-uppercase">Get a
-                            Quote </a>
-                    </div>
-                </div>
-            </div>
-        </nav>
+  <div class="container-fluid p-0 py-1" style="max-width: 95%;">
+    <a class="navbar-brand" href="/">
+      <img src="images/logo.png" alt="Brand Logo" class="img-fluid" style="max-width: 150px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav fs-5 gap-4 mx-auto">
+        <li class="nav-item">
+          <a class="active fs-18 fw-normal nav-link text-uppercase text-warning" aria-current="page" href="aboutus.html">About Us</a>
+        </li>
+
+        <!-- Services Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="fs-18 fw-normal nav-link text-uppercase text-warning dropdown-toggle" href="#" id="servicesDropdown"
+            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+            <!-- Título -->
+            <li><a class="dropdown-item text-uppercase " href="#">Creative</a></li>
+
+            <!-- Subitems horizontales -->
+            <li class="d-flex flex-row gap-3 px-3 py-2 submenu-horizontal">
+              <a class="submenu-item" href="branding.html">Branding</a>
+              <a class="submenu-item" href="graphicDesign.html">Graphic Design</a>
+              <a class="submenu-item" href="uiux.html">UI/UX Design</a>
+              <a class="submenu-item" href="contentCreation.html">Content Creation</a>
+            </li>
+
+            <!-- Otro item -->
+            <li><a class="dropdown-item text-uppercase" href="#">Web Services</a></li>
+
+            <!-- Subitems horizontales -->
+            <li class="d-flex flex-row gap-3 px-3 py-2 submenu-horizontal">
+              <a class="submenu-item" href="webDesign.html">Web Design</a>
+              <a class="submenu-item" href="webDevelopment.html">Web Development</a>
+              <a class="submenu-item" href="webSupport.html">Web Support & Hosting</a>
+              <a class="submenu-item" href="mobileApp.html">Mobile Apps</a>
+            </li>
+
+            <!-- Otro item -->
+            <li><a class="dropdown-item text-uppercase" href="#">Digital Marketing</a></li>
+
+            <!-- Subitems horizontales -->
+            <li class="d-flex flex-row gap-3 px-3 py-2 submenu-horizontal">
+              <a class="submenu-item" href="leadGeneration.html">Lead Generation</a>
+              <a class="submenu-item" href="aiPoweredChatbot.html">Chatbot Builders</a>
+              <a class="submenu-item" href="ppc.html">PPC</a>
+              <a class="submenu-item" href="searchEngine.html">SEO</a>
+              <a class="submenu-item" href="socialMedia.html">Social Media</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="fs-18 fw-normal nav-link text-uppercase text-warning" href="careers.html">Careers</a>
+        </li>
+        <li class="nav-item">
+          <a class="fs-18 fw-normal nav-link text-uppercase text-warning" href="#">Elevate X System</a>
+        </li>
+        <li class="nav-item">
+          <a class="fs-18 fw-normal nav-link text-uppercase text-warning" href="getintouch.html">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Redes sociales y botón -->
+      <div class="d-flex align-items-center gap-2">
+        <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+        <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+        <a href="getaquote.html" class="border-0 btn btn-gradient fs-6 fw-bold ms-4 px-4 text-uppercase">Get a Quote</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Estilos para dropdown personalizado -->
+<style>
+/* Mostrar el dropdown al pasar el cursor */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+/* Estilo general del dropdown */
+.dropdown-menu {
+  background-color: #000; /* fondo negro */
+  border: none;
+  transition: all 0.3s ease;
+  min-width: 300px;
+  padding: 0.5rem 0;
+}
+
+/* Items principales */
+.dropdown-menu .dropdown-item {
+  color: #00ff66;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #111;
+  color: #00ff66;
+}
+
+/* Subitems horizontales */
+.submenu-horizontal {
+  background-color: #000;
+  white-space: nowrap;
+  justify-content: flex-start;
+  border-top: 1px solid #222;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Subitems individuales */
+.submenu-horizontal .submenu-item {
+  color: #ffa500; /* Naranja */
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.submenu-horizontal .submenu-item:hover {
+  color: #FFF;
+  text-decoration: underline;
+}
+</style>
+ <style>
+/* Mostrar dropdown al pasar el mouse */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; /* evita salto visual */
+}
+
+/* Estilo del menú desplegable */
+.dropdown-menu {
+  background-color: #000000; /* Fondo negro */
+  opacity: 0.8;
+  border: none;
+  transition: all 0.3s ease;
+  min-width: 220px;
+}
+
+/* Estilo de los items dentro del dropdown */
+.dropdown-menu .dropdown-item {
+  color: #00ff66; /* Verde brillante */
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* Cambio de color al pasar el cursor */
+.dropdown-menu .dropdown-item:hover {
+  background-color: #111111; /* Fondo gris oscuro al pasar */
+  color: #00ff66; /* Se mantiene verde */
+}
+
+/* Opcional: animación suave */
+.dropdown-menu {
+  transition: all 0.3s ease;
+}
+
+/* Asegura que no se cierre al moverse ligeramente */
+.nav-item.dropdown:hover > .nav-link {
+  color: #ffc107 !important; /* o el color que estés usando para "text-warning" */
+}
+</style>
+
       <section class="hero" style="position: relative; overflow: hidden; height: 100vh; width: 100%; ">
         <div class="image-container" >
           <img src="images/PPC.png" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: -1; ">
